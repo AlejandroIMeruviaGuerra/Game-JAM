@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|c:\\6to_semestre\\realidad virtual\\gameham2\\salchichaloca\\assets\\02_scripts\\thirdpersoncameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\thirdpersoncameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\assets\\02_scripts\\finaldoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\finaldoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\assets\\02_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|c:\\6to_semestre\\realidad virtual\\gameham2\\salchichaloca\\assets\\02_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\assets\\02_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{406DBAD4-D361-AF71-4903-09656F82032B}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThirdPersonCameraController.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\ThirdPersonCameraController.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\ThirdPersonCameraController.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\ThirdPersonCameraController.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\ThirdPersonCameraController.cs",
+              "ViewState": "AQIAAJ4AAAAAAAAAAAAmwKEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T19:00:13.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FinalDoor.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\FinalDoor.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\FinalDoor.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\FinalDoor.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\FinalDoor.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:18:54.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Key.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\Key.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Key.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\Key.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Key.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAIwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:04:32.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Player.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Player.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAIAwwDsAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:00:36.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Door.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\Door.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Door.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\SALCHICHALOCA\\Assets\\02_Scripts\\Door.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Door.cs",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAcwM0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T15:00:08.656Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

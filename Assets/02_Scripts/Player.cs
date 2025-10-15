@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player : MonoBehaviour
@@ -37,7 +39,10 @@ public class Player : MonoBehaviour
     private Transform currentLadder;
     private Vector3 ladderSnapPosition;
     private Vector3 ladderForward;
-    private float ladderTopY;
+    private float ladderTopY;   
+
+    [Header("Sistema de Llaves")]
+    public List<string> collectedKeys = new List<string>();
 
     void Awake()
     {
@@ -55,7 +60,11 @@ public class Player : MonoBehaviour
         float inputZ = Input.GetAxis("Vertical");
 
         // Movimiento normal en ejes globales (siempre)
-        Vector3 planarDir = (Vector3.right * inputX + Vector3.forward * inputZ).normalized;
+        //Vector3 planarDir = (Vector3.right * inputX + Vector3.forward * inputZ).normalized;
+        Vector3 camF = ThirdPersonCameraController.PlanarForward;
+        Vector3 camR = ThirdPersonCameraController.PlanarRight;
+        Vector3 planarDir = (camR * inputX + camF * inputZ);
+        if (planarDir.sqrMagnitude > 0.0001f) planarDir.Normalize();
 
         // APLICAR MULTIPLICADOR DE VELOCIDAD
         float speedMultiplier = cookingSystem != null ? cookingSystem.SpeedMultiplier : 1f;
@@ -434,5 +443,48 @@ public class Player : MonoBehaviour
             Gizmos.DrawWireCube(topPosition, new Vector3(1f, 0.1f, 1f));
             Gizmos.DrawLine(transform.position, topPosition);
         }
+    }
+    public void CollectKey(Key key)
+    {
+        if (!collectedKeys.Contains(key.keyID))
+        {
+            collectedKeys.Add(key.keyID);
+            Debug.Log($"🗝️ Llave '{key.keyID}' obtenida! Llaves totales: {collectedKeys.Count}");
+
+            // Efecto visual/auditivo opcional
+            // Puedes agregar UI feedback aquí
+        }
+    }
+
+    public bool HasKey(string keyID)
+    {
+        return collectedKeys.Contains(keyID);
+    }
+
+    public bool HasAllKeys(string[] requiredKeys)
+    {
+        foreach (string keyID in requiredKeys)
+        {
+            if (!collectedKeys.Contains(keyID))
+                return false;
+        }
+        return true;
+    }
+
+    public string GetMissingKeys(string[] requiredKeys)
+    {
+        List<string> missing = new List<string>();
+        foreach (string keyID in requiredKeys)
+        {
+            if (!collectedKeys.Contains(keyID))
+                missing.Add(keyID);
+        }
+        return string.Join(", ", missing);
+    }
+
+    // Método para debug
+    private void PrintKeys()
+    {
+        Debug.Log($"🔑 Llaves recolectadas ({collectedKeys.Count}): {string.Join(", ", collectedKeys)}");
     }
 }
