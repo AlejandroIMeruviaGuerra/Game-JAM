@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class CommandSlotUI : MonoBehaviour
 {
     public Image frame;     // borde para resaltar foco
-    public Text label;      // muestra símbolo y x1/x2
+    public TextMeshProUGUI label;      // muestra símbolo y x1/x2
 
     public Command Current { get; private set; } = Command.None;
 

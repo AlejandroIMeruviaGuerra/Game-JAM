@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class CommandProgram : MonoBehaviour
     public Camera camEditor;
     public Camera camFollow;
     public RenderTexture followTex;     // asigna a RawImage si quieres “pantalla”
-    public Text hintLabel;
+    public TextMeshProUGUI hintLabel;
 
     [Header("UI Slots")]
     public CommandSlotUI[] slots;       // arrastra Slot(0..n)
