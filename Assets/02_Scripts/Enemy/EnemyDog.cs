@@ -1,34 +1,211 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class EnemyDog : MonoBehaviour
 {
+    public enum State { Patrol, Chase, Search }
+
     [Header("Referencias")]
-    public Transform player;          // jugador
-    public LayerMask visionBlockers;  // capas que bloquean la vista
+    public Transform player;
+    public Transform[] patrolPoints;
+    public LayerMask visionBlockers;
+    public LayerMask groundMask;
+    public float viewRadius = 10f;
+    public float viewAngle = 90f;
 
-    [Header("Par·metros de VisiÛn")]
-    public float viewRadius = 10f;    // distancia m·xima
-    public float viewAngle = 90f;     // ·ngulo del cono
-    public int rayCount = 7;          // cantidad de rayos en el cono
+    [Header("Movimiento")]
+    public float moveSpeed = 3f;
+    public float turnSpeed = 5f;
+    public float obstacleAvoidanceDistance = 1.5f;
+    public float proximityDetectionRadius = 3f;
+    public float detectionTime = 0.5f;
+    public float forgetTime = 1.5f;
+    public float searchDuration = 4f;
+    public float stuckResetTime = 3f;
 
-    [Header("Debug")]
-    public bool playerVisible = false;
+    [Header("Giro de b√∫squeda (ajustable en Inspector)")]
+    [Range(0.2f, 3f)] public float searchTurnSpeed = 1.2f;
+    [Range(10f, 80f)] public float searchTurnAngle = 40f;
+    [Range(1f, 10f)] public float searchTurnSmooth = 3f;
+
+    private int patrolIndex = 0;
+    private Vector3 lastSeenPosition;
+    private bool playerVisible = false;
+    private float seeTimer = 0f;
+    private float loseTimer = 0f;
+    private float searchTimer = 0f;
+    private float stuckTimer = 0f;
+    private Vector3 lastPosition;
+    private State state = State.Patrol;
+    private Rigidbody rb;
+
+    // Control del giro al buscar
+    private Quaternion searchBaseRotation;
+    private bool baseRotationSet = false;
+
+    // Prevenci√≥n de loops contra paredes
+    private float wallAvoidTimer = 0f;
+    private const float wallAvoidDuration = 1f;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = true;
+        rb.isKinematic = false;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
         if (!player)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
             if (p) player = p.transform;
         }
+
+        lastPosition = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         DetectPlayer();
-        DrawVisionRays();
+
+        switch (state)
+        {
+            case State.Patrol:
+                Patrol();
+                break;
+            case State.Chase:
+                Chase();
+                break;
+            case State.Search:
+                Search();
+                break;
+        }
+
+        KeepGrounded();
+        CheckIfStuck();
     }
 
+    // =======================
+    // === ESTADOS ===========
+    // =======================
+    void Patrol()
+    {
+        if (patrolPoints.Length == 0) return;
+
+        Vector3 target = patrolPoints[patrolIndex].position;
+        MoveTowards(target);
+
+        if (Vector3.Distance(transform.position, target) < 0.6f)
+            patrolIndex = (patrolIndex + 1) % patrolPoints.Length;
+
+        if (playerVisible)
+        {
+            seeTimer += Time.deltaTime;
+            if (seeTimer >= detectionTime)
+            {
+                state = State.Chase;
+                Debug.Log("EnemyDog: Persiguiendo al jugador!");
+            }
+        }
+        else seeTimer = 0f;
+    }
+
+    void Chase()
+    {
+        if (player)
+        {
+            MoveTowards(player.position);
+            lastSeenPosition = player.position;
+        }
+
+        if (playerVisible)
+        {
+            loseTimer = 0f;
+        }
+        else
+        {
+            loseTimer += Time.deltaTime;
+            if (loseTimer >= forgetTime)
+            {
+                Debug.Log("EnemyDog: Perdi√≥ al jugador ‚Äî iniciando b√∫squeda.");
+                state = State.Search;
+                searchTimer = 0f;
+                baseRotationSet = false;
+            }
+        }
+    }
+
+    void Search()
+    {
+        float dist = Vector3.Distance(transform.position, lastSeenPosition);
+        Vector3 origin = transform.position + Vector3.up * 0.4f;
+
+        // === Detecci√≥n de pared cercana ===
+        bool wallFront = Physics.Raycast(origin, transform.forward, 0.8f, visionBlockers);
+        bool wallLeft = Physics.Raycast(origin, -transform.right, 0.6f, visionBlockers);
+        bool wallRight = Physics.Raycast(origin, transform.right, 0.6f, visionBlockers);
+
+        if (wallFront)
+        {
+            wallAvoidTimer += Time.deltaTime;
+            Vector3 turnDir = (!wallRight) ? transform.right : -transform.right;
+            Quaternion avoidRot = Quaternion.LookRotation(turnDir, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, avoidRot, Time.deltaTime * 3f);
+
+            if (wallAvoidTimer > wallAvoidDuration)
+                wallAvoidTimer = 0f;
+
+            Debug.DrawRay(origin, transform.forward * 0.6f, Color.red);
+            Debug.DrawRay(origin, turnDir * 0.6f, Color.yellow);
+            return; // evita quedarse trabado
+        }
+
+        // === Movimiento hasta el punto de b√∫squeda ===
+        if (dist > 1f)
+        {
+            MoveTowards(lastSeenPosition);
+            return;
+        }
+
+        // === Giro exploratorio natural ===
+        searchTimer += Time.deltaTime;
+
+        if (!baseRotationSet)
+        {
+            searchBaseRotation = transform.rotation;
+            baseRotationSet = true;
+        }
+
+        float oscillation = Mathf.Sin(Time.time * searchTurnSpeed);
+        float yawOffset = oscillation * searchTurnAngle;
+        Quaternion offsetRot = Quaternion.Euler(0, yawOffset, 0);
+
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            searchBaseRotation * offsetRot,
+            Time.deltaTime * searchTurnSmooth
+        );
+
+        // === Retomar persecuci√≥n si lo ve ===
+        if (playerVisible)
+        {
+            Debug.Log("EnemyDog: ¬°Lo encontr√≥ de nuevo!");
+            state = State.Chase;
+            baseRotationSet = false;
+            return;
+        }
+
+        // === Volver a patrullar si no lo encuentra ===
+        if (searchTimer >= searchDuration)
+        {
+            Debug.Log("EnemyDog: No lo encontr√≥, retomando patrulla.");
+            state = State.Patrol;
+            baseRotationSet = false;
+        }
+    }
+
+    // =======================
+    // === DETECCI√ìN VISUAL ===
+    // =======================
     void DetectPlayer()
     {
         if (!player) return;
@@ -37,63 +214,132 @@ public class EnemyDog : MonoBehaviour
         float dist = Vector3.Distance(transform.position, player.position);
         float angle = Vector3.Angle(transform.forward, dirToPlayer);
 
-        // Dentro del rango y ·ngulo
-        if (dist < viewRadius && angle < viewAngle / 2f)
+        if (dist < proximityDetectionRadius)
         {
-            // Raycast: si no hay bloqueador
-            if (!Physics.Raycast(transform.position, dirToPlayer, dist, visionBlockers))
+            bool blocked = Physics.Raycast(transform.position + Vector3.up * 0.5f, dirToPlayer, dist, visionBlockers);
+            bool playerInFront = angle < 100f;
+
+            if (!blocked && playerInFront)
             {
-                if (!playerVisible)
+                RotateToFace(player.position);
+                if (state != State.Chase)
                 {
-                    Debug.Log("EnemyDog: °Jugador detectado!");
+                    state = State.Chase;
+                    Debug.Log("EnemyDog: Jugador muy cerca ‚Äî persecuci√≥n iniciada!");
                 }
                 playerVisible = true;
                 return;
             }
         }
 
-        // Si llega aquÌ, significa que no lo ve
-        if (playerVisible)
+        if (dist < viewRadius && angle < viewAngle / 2f)
         {
-            Debug.Log("EnemyDog: Jugador perdido.");
+            if (!Physics.Raycast(transform.position + Vector3.up * 0.5f, dirToPlayer, dist, visionBlockers))
+            {
+                playerVisible = true;
+                return;
+            }
         }
+
         playerVisible = false;
     }
 
-
-    void DrawVisionRays()
+    // =======================
+    // === MOVIMIENTO BASE ===
+    // =======================
+    void MoveTowards(Vector3 target)
     {
-        // Centro del enemigo
-        Vector3 start = transform.position + Vector3.up * 0.5f;
+        Vector3 direction = (target - transform.position).normalized;
+        AvoidObstacles(ref direction);
+        RotateToFace(transform.position + direction);
 
-        // Dibujar rayos distribuidos dentro del ·ngulo
-        for (int i = 0; i < rayCount; i++)
+        Vector3 move = transform.forward * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + move);
+    }
+
+    void RotateToFace(Vector3 point)
+    {
+        Vector3 dir = (point - transform.position);
+        dir.y = 0;
+        if (dir.magnitude > 0.1f)
         {
-            float t = (float)i / (rayCount - 1);
-            float angleOffset = Mathf.Lerp(-viewAngle / 2f, viewAngle / 2f, t);
+            Quaternion lookRot = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookRot, Time.deltaTime * turnSpeed);
+        }
+    }
 
-            Vector3 dir = Quaternion.Euler(0, angleOffset, 0) * transform.forward;
+    // =======================
+    // === EVITAR OBST√ÅCULOS ==
+    // =======================
+    void AvoidObstacles(ref Vector3 moveDir)
+    {
+        Vector3 origin = transform.position + Vector3.up * 0.5f;
+        float sideCheckDistance = 1.0f;
 
-            // Raycast para detectar obst·culos
-            if (Physics.Raycast(start, dir, out RaycastHit hit, viewRadius, visionBlockers))
+        if (Physics.Raycast(origin, transform.forward, out RaycastHit hitFront, obstacleAvoidanceDistance))
+        {
+            if (!hitFront.collider.CompareTag("Player"))
             {
-                Debug.DrawLine(start, hit.point, Color.red); // obst·culo
-            }
-            else
-            {
-                Debug.DrawRay(start, dir * viewRadius, Color.green); // sin obst·culo
+                Vector3 avoidDir = Vector3.Reflect(transform.forward, hitFront.normal);
+                avoidDir.y = 0;
+                moveDir = Vector3.Lerp(moveDir, avoidDir, 0.7f);
+                Debug.DrawRay(origin, avoidDir * 2f, Color.red);
             }
         }
 
-        // Dibuja el radio del cono en la Scene
-        Debug.DrawRay(start, transform.forward * viewRadius, Color.yellow);
+        bool hitLeft = Physics.Raycast(origin, -transform.right, sideCheckDistance);
+        bool hitRight = Physics.Raycast(origin, transform.right, sideCheckDistance);
+
+        if (hitLeft && !hitRight)
+            moveDir = Vector3.Lerp(moveDir, transform.right, 0.4f);
+        else if (hitRight && !hitLeft)
+            moveDir = Vector3.Lerp(moveDir, -transform.right, 0.4f);
     }
 
-    private void OnDrawGizmosSelected()
+    // =======================
+    // === MANTENER ALTURA ===
+    // =======================
+    void KeepGrounded()
     {
-        // Muestra el radio del cono de visiÛn
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out RaycastHit groundHit, 3f, groundMask))
+        {
+            Vector3 pos = transform.position;
+            pos.y = groundHit.point.y;
+            transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime * 10f);
+        }
+    }
+
+    // =======================
+    // === DETECTAR ATASCO ===
+    // =======================
+    void CheckIfStuck()
+    {
+        float moved = Vector3.Distance(transform.position, lastPosition);
+        lastPosition = transform.position;
+
+        if (moved < 0.05f)
+        {
+            stuckTimer += Time.deltaTime;
+            if (stuckTimer >= stuckResetTime)
+            {
+                Debug.Log("EnemyDog: Atascado ‚Äî reseteando a patrulla.");
+                state = State.Patrol;
+                stuckTimer = 0f;
+            }
+        }
+        else stuckTimer = 0f;
+    }
+
+    // =======================
+    // === DEBUG VISUAL =======
+    // =======================
+    void OnDrawGizmosSelected()
+    {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, viewRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, proximityDetectionRadius);
 
         Vector3 left = Quaternion.Euler(0, -viewAngle / 2f, 0) * transform.forward;
         Vector3 right = Quaternion.Euler(0, viewAngle / 2f, 0) * transform.forward;

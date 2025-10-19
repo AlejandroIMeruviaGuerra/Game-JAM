@@ -1,8 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Third-person camera orbit + follow + zoom + collision avoiding.
-/// Ahora también expone dirección planar (forward/right) para movimiento relativo.
+/// Third-person camera orbit + follow + zoom + collision avoiding + ajuste al retroceder.
 /// </summary>
 [DefaultExecutionOrder(100)]
 public class ThirdPersonCameraController : MonoBehaviour
@@ -47,6 +46,9 @@ public class ThirdPersonCameraController : MonoBehaviour
     Vector3 currentFollowPos;
     Vector3 followVel;
 
+    // === NUEVO: suavizado adicional para colisiones ===
+    float collisionDistanceSmoothVel;
+
     void Start()
     {
         if (target == null)
@@ -90,18 +92,34 @@ public class ThirdPersonCameraController : MonoBehaviour
 
         Quaternion rot = Quaternion.Euler(pitch, yaw, 0f);
 
+        // Suavizado de distancia de zoom
         currentDistance = Mathf.Lerp(currentDistance, desiredDistance,
             1f - Mathf.Exp(-Time.deltaTime / Mathf.Max(0.0001f, zoomSmooth)));
+
+        // Resuelve colisión
         float finalDistance = ResolveCollision(currentFollowPos, rot, currentDistance);
 
-        Vector3 camPos = currentFollowPos - rot * Vector3.forward * finalDistance;
+        // === NUEVO: ajuste dinámico cuando el jugador camina hacia la cámara ===
+        // Si el jugador se acerca demasiado, alejamos la cámara suavemente
+        float playerSpeedZ = Input.GetAxis("Vertical");
+        if (playerSpeedZ < -0.1f) // presionando "S"
+        {
+            finalDistance = Mathf.Lerp(finalDistance, maxDistance * 1.1f, Time.deltaTime * 2f);
+        }
+
+        // Interpolación suave para evitar saltos
+        float smoothDist = Mathf.SmoothDamp(currentDistance, finalDistance, ref collisionDistanceSmoothVel, 0.05f);
+
+        Vector3 camPos = currentFollowPos - rot * Vector3.forward * smoothDist;
         transform.SetPositionAndRotation(camPos, rot);
 
-        // === NUEVO: Actualizar ejes planares ===
+        // === Actualizar ejes planares ===
         Vector3 fwd = rot * Vector3.forward; fwd.y = 0f; fwd.Normalize();
         Vector3 rgt = rot * Vector3.right; rgt.y = 0f; rgt.Normalize();
         PlanarForward = fwd;
         PlanarRight = rgt;
+
+        currentDistance = smoothDist; // mantener coherencia
     }
 
     void HandleOrbitInput()
