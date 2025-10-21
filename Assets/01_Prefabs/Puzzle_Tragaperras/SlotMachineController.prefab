@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8227707743093563903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030956686956541442}
+  - component: {fileID: 3427927493204828336}
+  m_Layer: 0
+  m_Name: SlotMachineController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030956686956541442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227707743093563903}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.79, y: -4.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3427927493204828336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227707743093563903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93420baab21b7e0429b36bfe85550f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reelRenderers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  symbols:
+  - {fileID: 21300000, guid: 9cb178e828cf8d6468453ae9a3c6dd16, type: 3}
+  - {fileID: 21300000, guid: 615211ae5dc59fa4194108b81dfab3b2, type: 3}
+  - {fileID: 21300000, guid: 2a2932f84bf9eee48b5d5934aa5c8a42, type: 3}
+  minStep: 0.05
+  maxStep: 0.12
+  decelTime: 0.8
+  extraTicks: 10
+  sfx: {fileID: 0}
+  sfxTick: {fileID: 0}
+  sfxStop: {fileID: 0}
+  sfxWin: {fileID: 0}
+  sfxLose: {fileID: 0}

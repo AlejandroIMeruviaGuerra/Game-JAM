@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Descargas\\Game-JAM-luis-puertas-powerups\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{753AE7B2-A05B-D6A4-6329-D1063B10866C}|Assembly-CSharp.csproj|d:\\descargas\\game-jam-luis-puertas-powerups\\assets\\02_scripts\\enemy\\enemydog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{753AE7B2-A05B-D6A4-6329-D1063B10866C}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\enemy\\enemydog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyDog.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-luis-puertas-powerups\\Assets\\02_Scripts\\Enemy\\EnemyDog.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Enemy\\EnemyDog.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-luis-puertas-powerups\\Assets\\02_Scripts\\Enemy\\EnemyDog.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Enemy\\EnemyDog.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAcwF8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T16:04:27.395Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
