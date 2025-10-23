@@ -7,21 +7,33 @@ public class GridMap : MonoBehaviour
     public int width = 10;
     public int height = 8;
     public float cellSize = 1f;
+
+    [Tooltip("Offset adicional sobre la posición del GridBoard (opcional).")]
     public Vector3 origin = Vector3.zero;
 
-    [Header("Celdas bloqueadas (opcional si no usas colliders)")]
+    [Header("Bloqueos")]
+    [Tooltip("Celdas bloqueadas por lógica (además de colliders).")]
     public List<Vector2Int> blockedCells = new();
+
+    [Tooltip("Capa usada para obstáculos físicos (cubos, paredes, etc.).")]
+    public LayerMask obstacleMask; // crea la capa 'Obstacle' y asígnala
+
+    // === Origen real del tablero ===
+    public Vector3 BoardOrigin => transform.position + origin;
 
     public bool IsInside(Vector2Int cell) =>
         cell.x >= 0 && cell.x < width && cell.y >= 0 && cell.y < height;
 
     public Vector3 CellToWorld(Vector2Int cell)
-        => origin + new Vector3(cell.x * cellSize, 0, cell.y * cellSize);
+        => BoardOrigin + new Vector3(cell.x * cellSize, 0f, cell.y * cellSize);
 
     public Vector2Int WorldToCell(Vector3 pos)
     {
-        var p = pos - origin;
-        return new Vector2Int(Mathf.RoundToInt(p.x / cellSize), Mathf.RoundToInt(p.z / cellSize));
+        var p = pos - BoardOrigin;
+        return new Vector2Int(
+            Mathf.RoundToInt(p.x / cellSize),
+            Mathf.RoundToInt(p.z / cellSize)
+        );
     }
 
     public bool IsBlocked(Vector2Int cell)
@@ -29,29 +41,36 @@ public class GridMap : MonoBehaviour
         if (!IsInside(cell)) return true;
         if (blockedCells.Contains(cell)) return true;
 
-        // Alternativa: raycast o overlap para detectar colliders en capa Obstacle
-        var center = CellToWorld(cell) + Vector3.up * 0.5f;
-        return Physics.CheckBox(center, new Vector3(cellSize, 0.4f, cellSize) * 0.45f,
-                                Quaternion.identity, LayerMask.GetMask("Obstacle"));
+        // Si hay capa de obstáculos, revisa colliders
+        if (obstacleMask.value != 0)
+        {
+            var center = CellToWorld(cell) + Vector3.up * 0.5f;
+            var half = new Vector3(cellSize, 0.4f, cellSize) * 0.45f;
+            if (Physics.CheckBox(center, half, Quaternion.identity, obstacleMask))
+                return true;
+        }
+        return false;
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = new Color(0, 0.6f, 1, 0.25f);
+        // cuadricula
+        Gizmos.color = new Color(0f, 0.6f, 1f, 0.25f);
         for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)
             {
-                var c = new Vector2Int(x, y);
-                var w = CellToWorld(c);
+                var w = CellToWorld(new Vector2Int(x, y));
                 Gizmos.DrawWireCube(w, new Vector3(cellSize, 0f, cellSize));
             }
 
-        Gizmos.color = new Color(1, 0, 0, 0.35f);
+        // bloqueadas
+        Gizmos.color = new Color(1f, 0f, 0f, 0.35f);
         foreach (var bc in blockedCells)
             Gizmos.DrawCube(CellToWorld(bc), new Vector3(cellSize, 0.01f, cellSize));
     }
 }
 
+// === Comandos y dirección ===
 public enum Command
 {
     None,
@@ -66,16 +85,13 @@ public static class DirUtil
 {
     public static Vector2Int ToVec(this Facing f) => f switch
     {
-        Facing.North => Vector2Int.up,
-        Facing.East => Vector2Int.right,
-        Facing.South => Vector2Int.down,
-        Facing.West => Vector2Int.left,
+        Facing.North => Vector2Int.up,     // +Z
+        Facing.East => Vector2Int.right,  // +X
+        Facing.South => Vector2Int.down,   // -Z
+        Facing.West => Vector2Int.left,   // -X
         _ => Vector2Int.up
     };
 
-    public static Facing TurnLeft(this Facing f) =>
-        (Facing)(((int)f + 3) & 3); // -1 mod 4
-    public static Facing TurnRight(this Facing f) =>
-        (Facing)(((int)f + 1) & 3);
+    public static Facing TurnLeft(this Facing f) => (Facing)(((int)f + 3) & 3);
+    public static Facing TurnRight(this Facing f) => (Facing)(((int)f + 1) & 3);
 }
-

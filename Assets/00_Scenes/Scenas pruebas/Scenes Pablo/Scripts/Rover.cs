@@ -5,11 +5,14 @@ using UnityEngine;
 public class Rover : MonoBehaviour
 {
     public GridMap map;
-    public float moveTimePerCell = 0.25f;
-    public float rotateTime = 0.15f;
+    [Header("Tiempos (más grande = más lento)")]
+    public float moveTimePerCell = 0.50f; // subí el valor para que vaya más lento
+    public float rotateTime = 0.20f;
+
     public Facing startFacing = Facing.North;
-    public Vector2Int startCell = new(1, 1);
+    public Vector2Int startCell = new(4, 5);
     public Transform modelToRotate; // malla/visual
+    public float ySnap = 0.0f;      // altura base (0 si el piso es y=0)
 
     [Header("Estado runtime")]
     public Facing facing;
@@ -26,9 +29,12 @@ public class Rover : MonoBehaviour
         isRunning = false;
         facing = startFacing;
         cell = startCell;
+
         var p = map.CellToWorld(cell);
-        transform.position = new Vector3(p.x, transform.position.y, p.z);
-        if (modelToRotate) modelToRotate.rotation = Quaternion.LookRotation(facing.ToVec().To3(), Vector3.up);
+        transform.position = new Vector3(p.x, ySnap, p.z);
+
+        if (modelToRotate)
+            modelToRotate.rotation = Quaternion.LookRotation(facing.ToVec().To3(), Vector3.up);
     }
 
     public IEnumerator RunProgram(Command[] program, System.Action<bool> onFinish)
@@ -42,13 +48,14 @@ public class Rover : MonoBehaviour
             // Giro si es necesario
             int steps = (cmd == Command.Forward1 || cmd == Command.Forward2) ? 0 :
                         (cmd == Command.Left1 || cmd == Command.Left2) ? -1 : +1;
+
             if (steps != 0)
             {
                 facing = (steps < 0) ? facing.TurnLeft() : facing.TurnRight();
                 yield return RotateTo(facing);
             }
 
-            // Cantidad de avance
+            // Avance 1 o 2 celdas
             int moveCount = cmd switch
             {
                 Command.Forward1 => 1,
@@ -96,7 +103,8 @@ public class Rover : MonoBehaviour
     {
         Vector3 a = transform.position;
         Vector3 b = map.CellToWorld(targetCell);
-        b.y = a.y;
+        b.y = ySnap;
+
         float t = 0;
         while (t < 1f)
         {
@@ -105,9 +113,19 @@ public class Rover : MonoBehaviour
             cc.Move(p - transform.position);
             yield return null;
         }
+
         // Snap final
-        var end = map.CellToWorld(targetCell); end.y = a.y;
+        var end = map.CellToWorld(targetCell); end.y = ySnap;
         cc.enabled = false; transform.position = end; cc.enabled = true;
+    }
+
+    // ===== DEBUG opcional: muestra la celda actual en pantalla =====
+    void OnGUI()
+    {
+        // comenta si no lo necesitas
+        if (!map) return;
+        var c = map.WorldToCell(transform.position);
+        GUI.Label(new Rect(10, 10, 260, 22), $"Robot cell: {c.x},{c.y}");
     }
 }
 

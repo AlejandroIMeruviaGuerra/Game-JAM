@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb254186a20ef1a4aaa468c4105000d1, type: 3}
+  m_Name: Condensador Azul
+  m_EditorClassIdentifier: 
+  itemName: Condensador Azul
+  description: "Multiplica por 1.2 todos los combos de energ\xEDa azul\n"
+  icon: {fileID: 0}
+  scoreMultiplier: 1
+  comboMultiplier: 1.2
+  flatBonus: 0
+  bonusEnergyType: Blue
+  bonusEnergyPoints: 0
