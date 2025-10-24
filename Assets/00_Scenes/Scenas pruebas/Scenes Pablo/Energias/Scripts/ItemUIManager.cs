@@ -17,8 +17,12 @@ public class ItemUIManager : MonoBehaviour
     public void UpdateUI()
     {
         foreach (Transform child in contentParent)
-            Destroy(child.gameObject);
-
+        {
+            if (Application.isPlaying)
+                Destroy(child.gameObject);
+            else
+                DestroyImmediate(child.gameObject);
+        }
         foreach (var item in gameController.activeItems)
         {
             var slot = Instantiate(itemSlotPrefab, contentParent);

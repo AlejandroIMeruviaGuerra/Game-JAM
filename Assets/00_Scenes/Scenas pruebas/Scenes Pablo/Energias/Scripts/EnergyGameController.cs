@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +24,10 @@ public class EnergyGameController : MonoBehaviour
     [Header("Items Activos")]
     public List<EnergyItem> activeItems = new List<EnergyItem>();
 
+    [Header("Visual Effects")]
+    public EnergyVisualManager visualManager;
+
+
     private int currentScore = 0;
     private int turnsLeft;
     private string lastEnergy = "";
@@ -32,6 +36,7 @@ public class EnergyGameController : MonoBehaviour
     void Start()
     {
         turnsLeft = maxTurns;
+        activeItems = MetaProgressionManager.Instance.equippedItems;
         UpdateUI();
 
         // Asignar listeners
@@ -46,11 +51,16 @@ public class EnergyGameController : MonoBehaviour
 
         int basePoints = Random.Range(100, 300);
 
+
         // Combo check
         if (energyType == lastEnergy)
         {
             comboCount++;
             basePoints *= comboCount; // multiplicador creciente
+
+
+            // 🔥 Nuevo: activa efecto visual
+            visualManager.TriggerCombo(comboCount, Vector3.zero);
         }
         else
         {
@@ -72,6 +82,8 @@ public class EnergyGameController : MonoBehaviour
         }
     }
 
+
+
     float ApplyItemEffects(float points, string energyType)
     {
         float totalMultiplier = 1f;
@@ -83,7 +95,7 @@ public class EnergyGameController : MonoBehaviour
             points *= item.comboMultiplier;
             extraFlat += item.flatBonus;
 
-            // Si el objeto da bonus por tipo de energ�a
+            // Si el objeto da bonus por tipo de energía
             if (item.bonusEnergyType == energyType)
                 extraFlat += item.bonusEnergyPoints;
         }
@@ -100,9 +112,16 @@ public class EnergyGameController : MonoBehaviour
     void EndGame()
     {
         if (currentScore >= targetScore)
-            Debug.Log("GANASTE! Puntaje: " + currentScore);
+        {
+            Debug.Log("🎉 GANASTE! Puntaje final: " + currentScore);
+
+            // 🔹 Recompensa: desbloquear un objeto aleatorio
+            GiveRandomReward();
+        }
         else
-            Debug.Log("PERDISTE. Puntaje: " + currentScore);
+        {
+            Debug.Log("💀 PERDISTE. Puntaje: " + currentScore);
+        }
     }
     void SpawnFX(string type)
     {
@@ -114,5 +133,22 @@ public class EnergyGameController : MonoBehaviour
         if (fx != null)
             Instantiate(fx, Vector3.zero, Quaternion.identity);
     }
+    void GiveRandomReward()
+    {
+        var meta = MetaProgressionManager.Instance;
+        var catalog = meta.allItems;
 
+        // Buscar un objeto no desbloqueado aún
+        var locked = catalog.FindAll(i => !meta.unlockedItemNames.Contains(i.itemName));
+
+        if (locked.Count > 0)
+        {
+            int r = Random.Range(0, locked.Count);
+            meta.UnlockItem(locked[r]);
+        }
+        else
+        {
+            Debug.Log("⭐ Ya tienes todos los objetos desbloqueados.");
+        }
+    }
 }
