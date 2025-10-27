@@ -35,6 +35,7 @@ public class EnergyGameController : MonoBehaviour
 
     void Start()
     {
+        EnergyAudioManager.Instance.PlayClick();
         turnsLeft = maxTurns;
         activeItems = MetaProgressionManager.Instance.equippedItems;
         UpdateUI();
@@ -61,6 +62,8 @@ public class EnergyGameController : MonoBehaviour
 
             // 🔥 Nuevo: activa efecto visual
             visualManager.TriggerCombo(comboCount, Vector3.zero);
+
+            EnergyAudioManager.Instance.PlayCombo(comboCount); // 🔥 Nuevo
         }
         else
         {
@@ -81,7 +84,6 @@ public class EnergyGameController : MonoBehaviour
             EndGame();
         }
     }
-
 
 
     float ApplyItemEffects(float points, string energyType)

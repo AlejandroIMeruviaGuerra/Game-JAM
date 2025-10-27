@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using DG.Tweening;
+
 
 public class EnergyVisualManager : MonoBehaviour
 {
@@ -16,6 +18,11 @@ public class EnergyVisualManager : MonoBehaviour
     public float cameraShakeDuration = 0.2f;
 
     private Vector3 originalCamPos;
+
+    [Header("Animación del texto")]
+    public float comboTextScale = 1.5f;
+    public float comboTextDuration = 0.3f;
+
 
     void Start()
     {
@@ -45,6 +52,11 @@ public class EnergyVisualManager : MonoBehaviour
         // Cambiar fondo
         if (backgroundMaterial)
             backgroundMaterial.SetColor("_EmissionColor", comboText.color * 2f);
+        // Escala inicial pequeña, luego rebota
+        comboText.transform.localScale = Vector3.one * 0.5f;
+        comboText.transform.DOScale(comboTextScale, comboTextDuration)
+            .SetEase(Ease.OutBack);
+
     }
 
     IEnumerator FadeOutText()
