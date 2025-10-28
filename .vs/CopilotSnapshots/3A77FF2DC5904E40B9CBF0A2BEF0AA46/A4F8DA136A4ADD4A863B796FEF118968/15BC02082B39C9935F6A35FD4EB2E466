@@ -1,0 +1,109 @@
+﻿# .NET App Migration Plan: Windows Active Directory -> Microsoft Entra ID
+
+## Migration Request
+
+Migrate this codebase from `Windows Active Directory` to `Microsoft Entra ID`, focusing exclusively on code-level changes required for successful compilation.
+
+## Summary of automated codebase analysis
+
+- Projects discovered:
+  - `Assembly-CSharp.csproj` (Unity-generated legacy .csproj)
+  - `Assembly-CSharp-Editor.csproj` (Unity-generated legacy .csproj)
+- Target framework (detected from .csproj): `.NET Framework v4.7.1` (legacy / Unity environment)
+- Code scan results: no references were found to common Windows AD APIs such as `System.DirectoryServices`, `System.DirectoryServices.AccountManagement`, `PrincipalContext`, `DirectoryEntry`, LDAP strings, or similar AD-specific types in the C# source files.
+- Configuration files: no `appsettings.json`, `web.config`, or `packages.config` were detected at repository root by the automatic scan.
+
+Implication: At present there are no direct Windows Active Directory code usages in this repository that require replacement. The migration plan therefore focuses on verification steps, compatibility checks and a safe, repeatable process for applying AD -> Entra ID changes if/where they are discovered.
+
+## Tools usage
+
+You MUST use the Microsoft Entra ID knowledge base (`#microsoft_entra_id_knowledge_base`) for SDK specs and code samples. Also use the .NET dependency management and managed identity knowledge bases for package/version guidance and authentication patterns.
+
+- Primary KB: `#microsoft_entra_id_knowledge_base`
+- Dependency guidance: `.NET Dependency Management` KB
+- Managed identity guidance: `Managed Identity` KB (if migrating server-side secrets to Managed Identity)
+
+## Recommended NuGet packages (initial, from knowledge base)
+
+(Record these in the plan and validate compatibility in Unity/.NET Framework environment before adding.)
+
+- `Microsoft.Identity.Client` (MSAL) — recommended baseline for client/native/legacy .NET apps; example KB version: `4.77.0`.
+- `Microsoft.Graph` — Graph SDK to replace AD queries; example KB version: `5.93.0`.
+- `Microsoft.Identity.Web` / `Microsoft.Identity.Web.OWIN` — only for ASP.NET/OWIN web apps (KB examples `3.14.1`). Not expected to be used in this Unity repo unless server-side code is added.
+- `Azure.Identity` — for Managed Identity scenarios (example KB version: `1.14.0`).
+
+Notes:
+- These versions are pulled from the knowledge base and must be validated for compatibility with Unity's scripting runtime and the repository's `TargetFrameworkVersion`.
+- Unity projects commonly require using DLLs or assembly files placed under `Assets/Plugins` rather than standard `PackageReference` in SDK-style .csproj files.
+
+## Migration Scope (adapted)
+
+- DO: Keep the original project framework (`.NET Framework v4.7.1`) and Unity project structure.
+- DO: Replace any Windows AD code with Microsoft Entra ID / Microsoft Graph / MSAL equivalents only where such code exists.
+- DO: Update project references (legacy .csproj) to point to downloaded package DLLs as required for Unity.
+- DO: Update configuration files only if they exist and are needed for compilation (e.g., web.config/appSettings) — none detected currently.
+- DO NOT: Change business logic beyond API replacement required to compile.
+- DO NOT: Add new features or alter behavior except where necessary to compile with new SDKs.
+- DO NOT: Commit any files under `.appmod/`.
+
+## Success criteria (adapted)
+
+1. Any Windows AD dependencies/imports (if found) are replaced with Microsoft Entra ID equivalents or mapped to Microsoft Graph/MSAL.
+2. Old AD-only code files are removed or updated as appropriate.
+3. Codebase compiles successfully in the existing environment (Unity/.NET Framework v4.7.1) after changes.
+4. All migration tasks are tracked and marked completed in `.appmod/.migration/progress.md`.
+5. If a VCS (git) exists, all non-`.appmod` changes are committed on the migration branch before finishing.
+
+## Execution process (adapted for this repo)
+
+### 1) Read KBs and collect dependencies
+- Read `#microsoft_entra_id_knowledge_base`, `.NET dependency` KB and `managed identity` KB.
+- Collect candidate package names and versions and record them in this plan. Validate Unity compatibility.
+
+### 2) Verify AD usage in repository
+- Run a comprehensive code search for: `System.DirectoryServices`, `System.DirectoryServices.AccountManagement`, `PrincipalContext`, `DirectoryEntry`, LDAP strings, `Active Directory` textual mentions, server-side components that may use AD.
+- If none found (current scan result = none), document that migration is likely not required beyond verification.
+
+### 3) Version control preparation
+- If git is present:
+  - Check `git status`.
+  - If uncommitted changes exist, stash them including untracked files but excluding `.appmod/` (the plan). Option: temporarily add `.appmod/` to `.gitignore` if needed to ensure it is not stashed/committed.
+  - Create branch: `appmod/dotnet-migration-WindowsActiveDirectory-to-MicrosoftEntraID-[CurrentTimestamp]` where `[CurrentTimestamp]` is `yyyyMMddHHmmss`.
+  - Do not commit `.appmod/` files.
+
+### 4) If AD code is found — high-level steps
+- Identify all files to edit and list them in the plan.
+- For each target project (.csproj):
+  - If SDK-style: use `dotnet add package <PACKAGE> --version <VERSION>` (not expected here).
+  - If legacy (Unity) project: use `nuget install <PACKAGE> -Version <VERSION> -OutputDirectory <solution-dir>/packages`, then add `<Reference>` entries in the `.csproj` pointing to the downloaded DLLs (or copy DLLs to `Assets/Plugins` and add references as needed).
+- Replace AD-specific calls with Microsoft Graph equivalents or MSAL-based authentication flows per KB samples.
+- Update any config sections (e.g., appSettings / AzureAd sections) if present.
+- Build and fix compile errors.
+
+### 5) CVE check
+- After adding packages, summarize added packages and versions and call the CVE-check tool.
+- If vulnerabilities exist, pick non-vulnerable package versions and update plan.
+
+### 6) Build verification and commits
+- Build the solution (Unity / Visual Studio as appropriate) and fix compile errors.
+- Commit after each completed migration task with concise messages.
+- Ensure no non-`.appmod` changes remain uncommitted at the end.
+
+## Project-specific notes and risks
+
+- Unity (.NET Framework 4.7.1) compatibility risk:
+  - Many Microsoft Identity libraries target .NET Standard or .NET Core; verify DLL compatibility with Unity's runtime before adding to the project.
+  - If incompatible, prefer using lightweight OAuth2/OpenID Connect flows via HTTP calls or using prebuilt Unity-compatible packages.
+- If the repository depends on server-side components outside this repo, the migration may require server changes (not in scope). Document any uncovered server components.
+
+## Next steps (stop after creating plan/progress)
+
+1. I created this `plan.md` and will create `progress.md` next (both under `.appmod/.migration/`).
+2. After these files exist, I will pause and wait for you to type `Continue` to start the migration tasks described in `progress.md`.
+
+---
+
+Generated by automated analysis (checked projects and scanned for AD usages). If you want me to proceed, type `Continue` and I will:
+- Check git status, create the migration branch, stash changes as required,
+- Then execute the tasks in `.appmod/.migration/progress.md` in order.
+
