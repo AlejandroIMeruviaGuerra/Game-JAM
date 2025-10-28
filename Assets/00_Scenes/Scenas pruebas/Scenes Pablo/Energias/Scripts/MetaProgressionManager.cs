@@ -31,6 +31,9 @@ public class MetaProgressionManager : MonoBehaviour
             unlockedItemNames.Add(item.itemName);
             SaveProgress();
             Debug.Log("🔓 Desbloqueaste: " + item.itemName);
+            item.level++;
+            Debug.Log($"⭐ {item.itemName} sube a nivel {item.level}");
+            return;
         }
     }
 
