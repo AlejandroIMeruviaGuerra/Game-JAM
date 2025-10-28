@@ -35,6 +35,16 @@ public class EnergyGameController : MonoBehaviour
     public int currentRound = 1;
     public float targetMultiplier = 1.3f; // cada ronda aumenta objetivo un 30%
 
+    [Header("UI Extra")]
+    public TextMeshProUGUI roundBannerText;
+
+
+    public List<RoundModifier> possibleModifiers;
+    private RoundModifier activeModifier;
+
+
+
+
     private int currentScore = 0;
     private int turnsLeft;
     private string lastEnergy = "";
@@ -107,6 +117,20 @@ public class EnergyGameController : MonoBehaviour
 
             comboCount = 1;
         }
+
+        // Aplicar el modificador activo
+        if (activeModifier != null)
+        {
+            float mult = 1f;
+            if (energyType == "Red") mult = activeModifier.redMultiplier;
+            else if (energyType == "Blue") mult = activeModifier.blueMultiplier;
+            else if (energyType == "Green") mult = activeModifier.greenMultiplier;
+            else if (energyType == "Yellow") mult = activeModifier.yellowMultiplier;
+            else if (energyType == "Purple") mult = activeModifier.purpleMultiplier;
+
+            basePoints = Mathf.RoundToInt(basePoints * mult);
+        }
+
 
         lastEnergy = energyType;
         float finalPoints = ApplyItemEffects(basePoints, energyType);
@@ -187,18 +211,51 @@ public class EnergyGameController : MonoBehaviour
             Debug.Log("💀 PERDISTE. Puntaje: " + currentScore);
         }
     }
-    void NextRound()
+    public void NextRound()
     {
+        Debug.Log("✅ Entrando a NextRound()"); // <-- Añade esto
+
         currentRound++;
         targetScore = Mathf.RoundToInt(targetScore * targetMultiplier);
         maxTurns += 5; // más turnos si quieres más duración
         turnsLeft = maxTurns;
         currentScore = 0;
         comboCount = 0;
+        // 🎲 Seleccionar un modificador aleatorio de ronda
+        if (possibleModifiers != null && possibleModifiers.Count > 0)
+        {
+            activeModifier = possibleModifiers[Random.Range(0, possibleModifiers.Count)];
+            activeModifier.Apply(this);
+            ShowRoundBanner(activeModifier);
+        }
 
         Debug.Log("🌀 Ronda " + currentRound + " - Nuevo objetivo: " + targetScore);
         UpdateUI();
     }
+
+    void ShowRoundBanner(RoundModifier modifier)
+    {
+        if (roundBannerText == null)
+        {
+            Debug.LogWarning("⚠️ No se asignó roundBannerText en el Inspector.");
+            return;
+        }
+
+        roundBannerText.text = $"{modifier.modifierName}\n<size=20>{modifier.description}</size>";
+        roundBannerText.gameObject.SetActive(true);
+
+        Debug.Log($"🌀 Mostrando banner: {modifier.modifierName}");
+
+        StartCoroutine(HideBannerAfterDelay(roundBannerText, 3f));
+    }
+
+
+    System.Collections.IEnumerator HideBannerAfterDelay(TextMeshProUGUI banner, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        banner.gameObject.SetActive(false);
+    }
+
     void SpawnFX(string type)
     {
         GameObject fx = null;

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3daef54ee400542aea18260d650b55, type: 3}
+  m_Name: "Ronda El\xE9ctrica"
+  m_EditorClassIdentifier: 
+  modifierName: 
+  description: 
+  icon: {fileID: 0}
+  redMultiplier: 1
+  blueMultiplier: 1
+  greenMultiplier: 1
+  yellowMultiplier: 1
+  purpleMultiplier: 1
+  extraTurnOnSynergy: 0
+  comboBonusMultiplier: 1

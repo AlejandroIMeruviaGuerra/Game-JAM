@@ -5,36 +5,83 @@ using System.Collections.Generic;
 
 public class RewardPanelManager : MonoBehaviour
 {
+    [Header("Referencias UI")]
     public Button[] optionButtons;
     public TextMeshProUGUI[] optionTexts;
+
     private List<EnergyItem> offeredItems = new List<EnergyItem>();
     private MetaProgressionManager meta;
     private EnergyGameController controller;
 
-    void Start()
+    void Awake()
     {
-        meta = MetaProgressionManager.Instance;
-        //controller = FindObjectOfType<EnergyGameController>();
+        // 🔁 Buscar dinámicamente siempre (más seguro)
+        meta = MetaProgressionManager.Instance ?? FindObjectOfType<MetaProgressionManager>(true);
+        controller = FindObjectOfType<EnergyGameController>(true);
 
-        foreach (var btn in optionButtons)
-            btn.onClick.AddListener(() => ChooseReward(btn));
+        if (meta == null)
+            Debug.LogWarning("⚠️ RewardPanelManager no encontró MetaProgressionManager aún.");
 
         gameObject.SetActive(false);
     }
 
+    void Start()
+    {
+        meta = MetaProgressionManager.Instance ?? FindObjectOfType<MetaProgressionManager>(true);
+        controller = FindObjectOfType<EnergyGameController>(true);
+
+        // 🔹 Asignar correctamente cada listener
+        for (int i = 0; i < optionButtons.Length; i++)
+        {
+            int index = i; // importante para evitar bug del closure
+            optionButtons[i].onClick.AddListener(() => ChooseReward(index));
+        }
+
+        gameObject.SetActive(false);
+    }
+
+
     public void ShowRewardOptions()
     {
+        // 🔒 Verificaciones seguras
+        if (meta == null)
+        {
+            meta = MetaProgressionManager.Instance ?? FindObjectOfType<MetaProgressionManager>(true);
+            if (meta == null)
+            {
+                Debug.LogError("❌ No se encontró MetaProgressionManager. Asegúrate de que está en la escena o con DontDestroyOnLoad.");
+                return;
+            }
+        }
+
+        if (meta.allItems == null || meta.allItems.Count == 0)
+        {
+            Debug.LogError("❌ meta.allItems está vacío o no asignado.");
+            return;
+        }
+
         gameObject.SetActive(true);
         offeredItems.Clear();
 
+        // Filtrar ítems no desbloqueados
         var available = meta.allItems.FindAll(i => !meta.unlockedItemNames.Contains(i.itemName));
+
+        if (available == null || available.Count == 0)
+        {
+            Debug.LogWarning("⭐ Ya tienes todos los objetos desbloqueados.");
+            gameObject.SetActive(false);
+            controller?.NextRound();
+            return;
+        }
+
+        // Generar hasta 3 opciones
         for (int i = 0; i < optionButtons.Length; i++)
         {
             if (available.Count == 0) break;
 
             var item = available[Random.Range(0, available.Count)];
 
-            // 🎲 Generar rareza aleatoria aquí
+            // 🎲 Generar rareza aleatoria
             float roll = Random.value;
             if (roll < 0.6f) item.rarity = EnergyItem.ItemRarity.Common;
             else if (roll < 0.85f) item.rarity = EnergyItem.ItemRarity.Rare;
@@ -43,41 +90,56 @@ public class RewardPanelManager : MonoBehaviour
 
             offeredItems.Add(item);
 
-            optionTexts[i].text = $"{item.itemName}\n<size=22><color=#{GetColorForRarity(item.rarity)}>{item.rarity}</color></size>";
+            // Mostrar texto con color por rareza
+            if (optionTexts != null && i < optionTexts.Length)
+                optionTexts[i].text = $"{item.itemName}\n<size=22><color=#{GetColorForRarity(item.rarity)}>{item.rarity}</color></size>";
+
             available.Remove(item);
         }
+
+        Debug.Log("🎁 Llamando ShowRewardOptions()");
+
+        if (meta == null)
+        {
+            meta = MetaProgressionManager.Instance ?? FindObjectOfType<MetaProgressionManager>(true);
+            if (meta == null)
+            {
+                Debug.LogError("❌ No se encontró MetaProgressionManager.");
+                return;
+            }
+        }
+
+        Debug.Log($"📦 meta.allItems.Count = {meta.allItems.Count}");
     }
+
     string GetColorForRarity(EnergyItem.ItemRarity rarity)
     {
         switch (rarity)
         {
-            case EnergyItem.ItemRarity.Common: return "FFFFFF"; // blanco
-            case EnergyItem.ItemRarity.Rare: return "00BFFF"; // azul
-            case EnergyItem.ItemRarity.Epic: return "9932CC"; // morado
-            case EnergyItem.ItemRarity.Legendary: return "FFD700"; // dorado
+            case EnergyItem.ItemRarity.Common: return "FFFFFF";
+            case EnergyItem.ItemRarity.Rare: return "00BFFF";
+            case EnergyItem.ItemRarity.Epic: return "9932CC";
+            case EnergyItem.ItemRarity.Legendary: return "FFD700";
             default: return "FFFFFF";
         }
     }
 
-
-    void ChooseReward(Button chosen)
+    void ChooseReward(int index)
     {
-        int index = System.Array.IndexOf(optionButtons, chosen);
         if (index >= 0 && index < offeredItems.Count)
         {
             var item = offeredItems[index];
-            meta.UnlockItem(item);
+            meta ??= MetaProgressionManager.Instance ?? FindObjectOfType<MetaProgressionManager>(true);
 
-            // 🔁 Buscar dinámicamente el controlador cada vez (seguro)
-            var controller = FindObjectOfType<EnergyGameController>();
-            if (controller != null)
-            {
-                //controller.NextRound();
-            }
+            if (meta != null)
+                meta.UnlockItem(item);
             else
-            {
-                Debug.LogWarning("EnergyGameController no encontrado.");
-            }
+                Debug.LogError("❌ MetaProgressionManager sigue sin encontrarse al elegir recompensa.");
+
+            controller ??= FindObjectOfType<EnergyGameController>(true);
+
+            Debug.Log($"✅ Elegiste recompensa: {item.itemName}");
+            controller?.NextRound();
         }
 
         gameObject.SetActive(false);

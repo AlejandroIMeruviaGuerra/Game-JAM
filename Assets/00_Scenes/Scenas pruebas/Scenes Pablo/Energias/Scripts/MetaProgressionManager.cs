@@ -16,12 +16,40 @@ public class MetaProgressionManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton simple
-        if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
-        else { Destroy(gameObject); }
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            Debug.Log("✅ MetaProgressionManager inicializado correctamente.");
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        LoadProgress();
+        // 🔹 Solo cargar progreso si hay datos
+        if (PlayerPrefs.HasKey("UnlockedItems"))
+            LoadProgress();
+        else
+            Debug.Log("ℹ️ No hay progreso previo, iniciando en blanco.");
+        if (allItems == null || allItems.Count == 0)
+            Debug.LogWarning("⚠️ El catálogo de ítems (allItems) está vacío. Asigna tus EnergyItems en el Inspector.");
+
     }
+    void EnsureMetaProgressionManager()
+    {
+        if (MetaProgressionManager.Instance == null)
+        {
+            var prefab = Resources.Load<MetaProgressionManager>("MetaProgressionManager");
+            if (prefab != null)
+                Instantiate(prefab);
+            else
+                Debug.LogError("❌ No se encontró el prefab 'MetaProgressionManager' en Resources.");
+        }
+    }
+
+
 
     // 🔹 Agregar un objeto desbloqueado
     public void UnlockItem(EnergyItem item)
