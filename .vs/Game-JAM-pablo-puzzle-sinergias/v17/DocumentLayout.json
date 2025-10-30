@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\02_Scripts\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\ReelMotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\02_Scripts\\Puzzle_Tragaperras\\ReelMotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\PlayerCookingSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\02_Scripts\\PlayerCookingSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Door\u0026\u0026Key\\Door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\02_Scripts\\Door\u0026\u0026Key\\Door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotButtonF.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotButtonF.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerCookingSystem.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "ViewState": "AgIAAEsCAAAAAAAAAADwv2ACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T22:40:01.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Door.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Door\u0026\u0026Key\\Door.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Door\u0026\u0026Key\\Door.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Door\u0026\u0026Key\\Door.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Door\u0026\u0026Key\\Door.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAhwIAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T22:39:15.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Player.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Player.cs",
+              "ViewState": "AgIAAFUBAAAAAAAAAAAhwGQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:15:04.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SlotButtonF.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotButtonF.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotButtonF.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotButtonF.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotButtonF.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T11:27:37.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReelMotion.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\ReelMotion.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Puzzle_Tragaperras\\ReelMotion.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\ReelMotion.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Puzzle_Tragaperras\\ReelMotion.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAhwAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T11:20:41.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SlotMachineController.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-pablo-puzzle-sinergias\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T11:02:00.644Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
