@@ -42,13 +42,13 @@ public class EnergyGameController : MonoBehaviour
     public List<RoundModifier> possibleModifiers;
     private RoundModifier activeModifier;
 
-
-
-
     private int currentScore = 0;
     private int turnsLeft;
     private string lastEnergy = "";
     private int comboCount = 0;
+
+    private bool combosBlocked = false;
+    private float synergyBoostMultiplier = 1f;
 
     private Dictionary<string, EnergySynergy> synergies;
 
@@ -92,65 +92,73 @@ public class EnergyGameController : MonoBehaviour
 
         int basePoints = Random.Range(100, 300);
 
-
-        // Combo check
+        // -----------------------------------------
+        // COMBOS
+        // -----------------------------------------
+        // ⚠️ BORRAR ESTO EN EL FUTURO (solo para testear efectos visuales)
         if (energyType == lastEnergy)
         {
             comboCount++;
-            basePoints *= comboCount; // multiplicador creciente
-
+            basePoints *= comboCount;
         }
-        else
+
+        // Sinergias (solo si no se bloquean combos)
+        if (!string.IsNullOrEmpty(lastEnergy) && !combosBlocked)
         {
-            // 🔮 NUEVO SISTEMA DE SINERGIAS
             string key = lastEnergy + "-" + energyType;
             if (synergies.ContainsKey(key))
             {
                 var synergy = synergies[key];
-                basePoints = Mathf.RoundToInt(basePoints * synergy.multiplier);
-                Debug.Log($"✨ {synergy.name}! ({synergy.description}) x{synergy.multiplier}");
+                basePoints = Mathf.RoundToInt(basePoints * (synergy.multiplier * synergyBoostMultiplier));
 
-                // Visual feedback (puedes personalizar)
+                Debug.Log($"✨ {synergy.name}! ({synergy.description}) x{synergy.multiplier * synergyBoostMultiplier}");
+
+                // Visual feedback para sinergia
                 visualManager.TriggerCombo(comboCount + 1, Vector3.zero);
                 EnergyAudioManager.Instance.PlayCombo(comboCount + 1);
             }
-
-            comboCount = 1;
         }
 
-        // Aplicar el modificador activo
+        lastEnergy = energyType;
+
+        // -----------------------------------------
+        // MODIFICADOR DE RONDA
+        // -----------------------------------------
         if (activeModifier != null)
         {
             float mult = 1f;
-            if (energyType == "Red") mult = activeModifier.redMultiplier;
-            else if (energyType == "Blue") mult = activeModifier.blueMultiplier;
-            else if (energyType == "Green") mult = activeModifier.greenMultiplier;
-            else if (energyType == "Yellow") mult = activeModifier.yellowMultiplier;
-            else if (energyType == "Purple") mult = activeModifier.purpleMultiplier;
+            switch (energyType)
+            {
+                case "Red": mult = activeModifier.redMultiplier; break;
+                case "Blue": mult = activeModifier.blueMultiplier; break;
+                case "Green": mult = activeModifier.greenMultiplier; break;
+                case "Yellow": mult = activeModifier.yellowMultiplier; break;
+                case "Purple": mult = activeModifier.purpleMultiplier; break;
+            }
 
             basePoints = Mathf.RoundToInt(basePoints * mult);
         }
 
-
-        lastEnergy = energyType;
+        // -----------------------------------------
+        // OBJETOS ACTIVOS
+        // -----------------------------------------
         float finalPoints = ApplyItemEffects(basePoints, energyType);
 
         currentScore += Mathf.RoundToInt(finalPoints);
         turnsLeft--;
 
-        // 🔥 Nuevo: activa efecto visual
+        // Visual feedback del combo actual
         visualManager.TriggerCombo(comboCount, Vector3.zero);
-
-        EnergyAudioManager.Instance.PlayCombo(comboCount); // 🔥 Nuevo
-
+        EnergyAudioManager.Instance.PlayCombo(comboCount);
         SpawnFX(energyType);
+
         UpdateUI();
 
-        if (turnsLeft == 0)
-        {
+        // Fin de ronda
+        if (turnsLeft <= 0)
             EndGame();
-        }
     }
+
 
 
     float ApplyItemEffects(float points, string energyType)
@@ -164,24 +172,39 @@ public class EnergyGameController : MonoBehaviour
             points *= item.comboMultiplier;
             extraFlat += item.flatBonus;
 
-            // Si el objeto da bonus por tipo de energía
+            // Bono por tipo de energía
             if (item.bonusEnergyType == energyType)
                 extraFlat += item.bonusEnergyPoints;
 
+            // Extiende combos
             if (item.extendsCombo && comboCount > 3)
                 points *= 1.2f;
 
-            if (!string.IsNullOrEmpty(item.synergyBoost))
+            // Sinergia potenciada
+            if (!string.IsNullOrEmpty(item.synergyBoost) &&
+                item.synergyBoost == lastEnergy + "-" + energyType)
             {
-
-                if (item.synergyBoost == lastEnergy + "-" + energyType)
-                    points += 200;
+                points += 200;
             }
 
+            // 🌀 NUEVO: regenerar turno al alcanzar combo alto
+            if (item.regenerateTurn && comboCount >= 4)
+            {
+                AddExtraTurn();
+                Debug.Log($"🔋 {item.itemName} te otorgó un turno adicional.");
+            }
+
+            // 🌀 NUEVO: conversión de energía (ejemplo: Amarillo → Rojo)
+            if (item.convertEnergy && energyType == "Yellow")
+            {
+                energyType = "Red";
+                Debug.Log($"🌈 {item.itemName} convirtió energía Amarilla en Roja.");
+            }
         }
 
         return (points * totalMultiplier) + extraFlat;
     }
+
 
     void UpdateUI()
     {
@@ -213,25 +236,48 @@ public class EnergyGameController : MonoBehaviour
     }
     public void NextRound()
     {
-        Debug.Log("✅ Entrando a NextRound()"); // <-- Añade esto
+        Debug.Log("✅ Entrando a NextRound()");
 
         currentRound++;
         targetScore = Mathf.RoundToInt(targetScore * targetMultiplier);
-        maxTurns += 5; // más turnos si quieres más duración
+        maxTurns += 5;
         turnsLeft = maxTurns;
         currentScore = 0;
         comboCount = 0;
-        // 🎲 Seleccionar un modificador aleatorio de ronda
+
+        // Reiniciar efectos previos
+        combosBlocked = false;
+        synergyBoostMultiplier = 1f;
+
+        // Seleccionar modificador aleatorio
         if (possibleModifiers != null && possibleModifiers.Count > 0)
         {
             activeModifier = possibleModifiers[Random.Range(0, possibleModifiers.Count)];
             activeModifier.Apply(this);
             ShowRoundBanner(activeModifier);
+
+            // 🌈 Cambiar color de fondo (con transición suave)
+            if (Camera.main != null)
+                StartCoroutine(AnimateBackgroundColor(activeModifier.bannerColor, 1.5f));
         }
 
-        Debug.Log("🌀 Ronda " + currentRound + " - Nuevo objetivo: " + targetScore);
+        Debug.Log($"🌀 Ronda {currentRound} — Nuevo objetivo: {targetScore}");
         UpdateUI();
     }
+    System.Collections.IEnumerator AnimateBackgroundColor(Color targetColor, float duration)
+    {
+        if (Camera.main == null) yield break;
+
+        Color startColor = Camera.main.backgroundColor;
+        float t = 0f;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            Camera.main.backgroundColor = Color.Lerp(startColor, targetColor, t / duration);
+            yield return null;
+        }
+    }
+
 
     void ShowRoundBanner(RoundModifier modifier)
     {
@@ -242,12 +288,37 @@ public class EnergyGameController : MonoBehaviour
         }
 
         roundBannerText.text = $"{modifier.modifierName}\n<size=20>{modifier.description}</size>";
-        roundBannerText.gameObject.SetActive(true);
-
-        Debug.Log($"🌀 Mostrando banner: {modifier.modifierName}");
-
-        StartCoroutine(HideBannerAfterDelay(roundBannerText, 3f));
+        roundBannerText.color = modifier.bannerColor;
+        StartCoroutine(FadeBanner(roundBannerText, 0.8f));
     }
+
+    System.Collections.IEnumerator FadeBanner(TextMeshProUGUI banner, float duration)
+    {
+        CanvasGroup group = banner.GetComponent<CanvasGroup>() ?? banner.gameObject.AddComponent<CanvasGroup>();
+        group.alpha = 0;
+        banner.gameObject.SetActive(true);
+
+        float t = 0;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            group.alpha = Mathf.Lerp(0, 1, t / duration);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(2.5f);
+
+        t = 0;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            group.alpha = Mathf.Lerp(1, 0, t / duration);
+            yield return null;
+        }
+
+        banner.gameObject.SetActive(false);
+    }
+
 
 
     System.Collections.IEnumerator HideBannerAfterDelay(TextMeshProUGUI banner, float delay)
@@ -286,6 +357,24 @@ public class EnergyGameController : MonoBehaviour
         {
             Debug.Log("⭐ Ya tienes todos los objetos desbloqueados.");
         }
+    }
+    public void AddExtraTurn()
+    {
+        turnsLeft += 1;
+        Debug.Log("🔁 +1 turno extra por efecto de ronda");
+        UpdateUI();
+    }
+
+    public void BlockCombos(bool state)
+    {
+        combosBlocked = state;
+        Debug.Log(state ? "🚫 Combos bloqueados esta ronda" : "✅ Combos activados nuevamente");
+    }
+
+    public void BoostSynergies(float factor)
+    {
+        synergyBoostMultiplier = factor;
+        Debug.Log($"⚡ Potenciando sinergias x{factor}");
     }
 }
 [System.Serializable]

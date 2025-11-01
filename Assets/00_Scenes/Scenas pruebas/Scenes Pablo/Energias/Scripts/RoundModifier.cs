@@ -1,26 +1,31 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewRoundModifier", menuName = "EnergyGame/Round Modifier")]
+[System.Serializable]
+[CreateAssetMenu(fileName = "NewRoundModifier", menuName = "Energias/Round Modifier")]
 public class RoundModifier : ScriptableObject
 {
-    [Header("Información del modificador")]
+    [Header("Identidad de la Ronda")]
     public string modifierName;
-    [TextArea] public string description;
-    public Sprite icon;
+    [TextArea(2, 4)] public string description;
+    public Color bannerColor = Color.white;
 
-    [Header("Multiplicadores de Energía")]
-    public float redMultiplier = 1f;
-    public float blueMultiplier = 1f;
-    public float greenMultiplier = 1f;
-    public float yellowMultiplier = 1f;
-    public float purpleMultiplier = 1f;
+    [Header("Multiplicadores por Energía")]
+    [Range(0.1f, 3f)] public float redMultiplier = 1f;
+    [Range(0.1f, 3f)] public float blueMultiplier = 1f;
+    [Range(0.1f, 3f)] public float greenMultiplier = 1f;
+    [Range(0.1f, 3f)] public float yellowMultiplier = 1f;
+    [Range(0.1f, 3f)] public float purpleMultiplier = 1f;
 
-    [Header("Bonificaciones especiales")]
-    public bool extraTurnOnSynergy;
-    public float comboBonusMultiplier = 1f;
+    [Header("Efectos adicionales (opcional futuro)")]
+    public bool extraTurn;
+    public bool blockCombos;
+    public bool doubleSynergies;
 
     public void Apply(EnergyGameController controller)
     {
-        Debug.Log($"🔮 Nueva ronda: {modifierName} — {description}");
+        Debug.Log($"🎯 Aplicando modificador: {modifierName}");
+        if (extraTurn) controller.AddExtraTurn();
+        if (blockCombos) controller.BlockCombos(true);
+        if (doubleSynergies) controller.BoostSynergies(2f);
     }
 }
