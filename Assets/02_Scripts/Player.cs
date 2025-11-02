@@ -44,6 +44,11 @@ public class Player : MonoBehaviour
     [Header("Sistema de Llaves")]
     public List<string> collectedKeys = new List<string>();
 
+    private bool isMovementLocked = false;
+
+    public Animator animator;
+    public ThirdPersonCameraController cameraController; // si tienes una cámara libre
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -56,6 +61,13 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (isMovementLocked)
+        {
+            // Aseguramos que el jugador no se mueva ni salte
+            controller.Move(Vector3.zero);
+            velocity = Vector3.zero;
+            return;
+        }
         float inputX = Input.GetAxis("Horizontal");
         float inputZ = Input.GetAxis("Vertical");
 
@@ -93,6 +105,8 @@ public class Player : MonoBehaviour
         HandleNormalMovement(planarMove, isGrounded);
 
         wasGroundedLastFrame = isGrounded;
+
+        
     }
 
     private void CheckForLadders()
@@ -487,4 +501,26 @@ public class Player : MonoBehaviour
     {
         Debug.Log($"🔑 Llaves recolectadas ({collectedKeys.Count}): {string.Join(", ", collectedKeys)}");
     }
+
+    // =========================
+    // 🔒 BLOQUEO DE MOVIMIENTO DURANTE DIÁLOGOS
+    // =========================
+
+    
+
+    public void SetMovementLock(bool locked)
+    {
+        isMovementLocked = locked;
+        velocity = Vector3.zero;
+
+        if (animator != null)
+            animator.SetBool("isMoving", false); // deja al personaje quieto
+
+        if (cameraController != null)
+            cameraController.enabled = !locked; // bloquea rotación de cámara
+    }
+
+
+
+
 }

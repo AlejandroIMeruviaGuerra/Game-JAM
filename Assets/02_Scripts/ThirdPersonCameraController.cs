@@ -1,8 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Third-person camera orbit + follow + zoom + collision avoiding.
-/// Ahora tambi�n expone direcci�n planar (forward/right) para movimiento relativo.
+/// Ahora también expone dirección planar (forward/right) para movimiento relativo.
 /// </summary>
 [DefaultExecutionOrder(100)]
 public class ThirdPersonCameraController : MonoBehaviour
@@ -27,9 +27,14 @@ public class ThirdPersonCameraController : MonoBehaviour
     public float zoomSmooth = 0.15f;
     public float cameraRadius = 0.25f;
 
-    [Header("Colisi�n con el entorno")]
+    [Header("Colisión con el entorno")]
     public LayerMask collisionLayers = ~0;
     public float collisionBuffer = 0.1f;
+
+    [Header("Bloqueo de cámara")]
+    public bool canRotate = true;
+    public bool canZoom = true;
+
 
     [Header("Cursor")]
     public bool lockCursor = true;
@@ -106,6 +111,8 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     void HandleOrbitInput()
     {
+        if (!canRotate) return; // 🔒 Si está bloqueado, no rota
+
         bool allowRotate = !(rightMouseToRotate && !Input.GetMouseButton(1));
         if (!allowRotate) return;
 
@@ -118,8 +125,11 @@ public class ThirdPersonCameraController : MonoBehaviour
         pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
     }
 
+
     void HandleZoomInput()
     {
+        if (!canZoom) return; // 🔒 Si está bloqueado, no hace zoom
+
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (Mathf.Abs(scroll) > Mathf.Epsilon)
         {
@@ -127,6 +137,7 @@ public class ThirdPersonCameraController : MonoBehaviour
             desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
         }
     }
+
 
     float ResolveCollision(Vector3 pivot, Quaternion rot, float desiredDist)
     {
