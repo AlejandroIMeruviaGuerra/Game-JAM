@@ -1,0 +1,72 @@
+﻿# Migration Progress: Windows Active Directory -> Microsoft Entra ID
+
+This file tracks the migration tasks. Do NOT commit this file; it is for local migration tracking only.
+
+## Status checklist
+
+- [X] Create migration tracking files `.appmod/.migration/plan.md` and `.appmod/.migration/progress.md` (generated automatically)
+- [ ] Read `#microsoft_entra_id_knowledge_base` and related dependency/managed-identity KBs; record candidate packages and versions
+- [ ] Run comprehensive code search for Windows AD usage (`System.DirectoryServices`, `PrincipalContext`, `DirectoryEntry`, LDAP, etc.)
+- [ ] Document all files that require AD -> Entra ID code changes (if any)
+- [ ] Check version control status (git)
+- [ ] Stash uncommitted changes (include untracked), excluding `.appmod/` files
+- [ ] Create migration branch `appmod/dotnet-migration-WindowsActiveDirectory-to-MicrosoftEntraID-[CurrentTimestamp]`
+- [ ] Add package references / copy required DLLs into project (per-project tasks)
+  - [ ] `Assembly-CSharp.csproj` (Unity/legacy): download packages and add `<Reference>` / copy DLLs to `Assets/Plugins` as needed
+  - [ ] `Assembly-CSharp-Editor.csproj` (Unity/legacy editor code): update references as needed
+- [ ] Replace AD API usages with Microsoft Entra ID / Microsoft Graph / MSAL equivalents in code files
+- [ ] Update configuration files (if any) to include AzureAd/DownstreamApi settings
+- [ ] Build solution and fix compile errors
+- [ ] Run CVE vulnerability check on added packages and update package versions if vulnerable
+- [ ] Commit changes after each task (do not commit `.appmod/` files)
+- [ ] Clean up old AD-specific files that are no longer needed
+- [ ] Final review and mark migration complete
+
+> Note: Only one task should be marked `- [in_progress]` at a time while performing the migration. Update this file and commit after each completed task (exclude `.appmod/`).
+
+## Notes
+- Current automated scan found no AD-specific API usages; if you have server-side components not included in this repository, please point me to them.
+- Because this is a Unity project targeting .NET Framework v4.7.1, validate DLL/package compatibility with Unity scripting runtime before adding packages.
+
+## Important Guideline
+
+1. When you use terminal command tool, never input a long command with multiple lines, always use a single line command. (This is a bug in VS Copilot)
+2. When performing semantic or intent-based searches, DO NOT search content from `.appmod/` folder.
+3. Never create a new project in the solution, always use the existing project to add new files or update the existing files.
+4. Minimize code changes:
+    - Update only what's necessary for the migration.
+    - Avoid unrelated code enhancement.
+5. Add New Package References to Projects
+   Read the `.csproj` file of the target project, if there is SDK attribute in the <Project> element (e.g., `<Project Sdk="Microsoft.NET.Sdk">`), it is a .NET SDK-style project.
+   - For .NET SDK style project, use the following command to add each package: `dotnet add package <PACKAGE_NAME> --version <VERSION>`.
+   - For non-sdk style project, follow these steps:
+     1. Unload the project via tool `unload_project`.
+     2. Install and discover packages: Switch to csproj file directory, install each package via command `nuget install <PACKAGE_NAME> -Version <VERSION> -OutputDirectory <solution-dir>/packages`, then identify the highest version of each installed package from the `<solution-dir>/packages` folder and record the package name and version.
+     3. Update project configuration files: Use tool `get_file` to read and `edit_file` to modify the .csproj file to add package references (ensuring they point to `<solution-dir>/packages`), manage packages in `packages.config` file (create if it doesn't exist), and update Web.config or App.config files when necessary.
+     4. Reload the project via tool `reload_project`. Make sure you always reload the project after unload - never leave projects unloaded in the solution.
+6. **Task Tracking and Progress Updates**
+   - Output each task as a Markdown-formatted checklist in `progress.md`.
+     - Each task should begin with `- [ ]` (a dash, a space, an open square bracket, a space, and a closing square bracket), followed by the task description.
+     - `- [ ]` for tasks not started
+     - `- [X]` for tasks completed
+     - `- [in_progress]` for tasks currently being worked on
+   - Before starting any migration task, mark it as `in_progress` in `progress.md`. Only one task should be marked as `in_progress` at a time.
+   - As soon as a task is completed, immediately update its status to completed in `progress.md` and commit with a concise message before moving to the next task.
+   - Update the status of tasks in real-time as you work, ensuring `progress.md` always reflects the current state.
+   - If you discover new required tasks during migration, add them to `progress.md` and the plan immediately, and track their status as above.
+   - For tasks that are skipped or turned out to be unnecessary, mark them as completed with a note explaining why.
+   - Do not batch status updates; always update `progress.md` as soon as a task's status changes.
+7. **Version Control Integration**
+   - ALWAYS include version control tasks in `progress.md` to ensure proper tracking:
+     - Check git status before starting migration tasks
+     - Create new migration branch (if not already created)
+     - Stage and commit changes after each completed task
+     - Check for uncommitted changes before finishing
+   - **CRITICAL**: DO NOT commit any files in the `.appmod` folder - these are temporary migration tracking files only
+   - **CRITICAL**: Always create a new branch and commit all other code changes - uncommitted changes should not remain at the end of migration
+8. After all tasks are finished, review `progress.md` to ensure all tasks are finished and marked as complete.
+
+---
+
+When you are ready for me to begin the migration steps in `progress.md`, type `Continue`.
+
