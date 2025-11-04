@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using DG.Tweening;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,9 +37,17 @@ public class EnergyGameController : MonoBehaviour
     public int currentRound = 1;
     public float targetMultiplier = 1.3f; // cada ronda aumenta objetivo un 30%
 
+    [Header("Energy Core Visual")]
+    public EnergyCoreController coreController;
+
+    [Header("Energy Effects")]
+    public EnergyEffectManager energyEffectManager;
+
+
     [Header("UI Extra")]
     public TextMeshProUGUI roundBannerText;
 
+    public AnimatedScore scoreAnimator;
 
     public List<RoundModifier> possibleModifiers;
     private RoundModifier activeModifier;
@@ -103,6 +113,7 @@ public class EnergyGameController : MonoBehaviour
         }
 
         // Sinergias (solo si no se bloquean combos)
+        // Sinergias (solo si no se bloquean combos)
         if (!string.IsNullOrEmpty(lastEnergy) && !combosBlocked)
         {
             string key = lastEnergy + "-" + energyType;
@@ -113,11 +124,44 @@ public class EnergyGameController : MonoBehaviour
 
                 Debug.Log($"✨ {synergy.name}! ({synergy.description}) x{synergy.multiplier * synergyBoostMultiplier}");
 
+                // 🎨 Elegir color base según tipo actual (para el núcleo)
+                Color synergyColor = Color.white;
+                switch (energyType)
+                {
+                    case "Red": synergyColor = new Color(1f, 0.3f, 0.1f); break;
+                    case "Blue": synergyColor = new Color(0.2f, 0.6f, 1f); break;
+                    case "Green": synergyColor = new Color(0.1f, 1f, 0.4f); break;
+                    case "Yellow": synergyColor = new Color(1f, 0.9f, 0.2f); break;
+                    case "Purple": synergyColor = new Color(0.6f, 0.2f, 0.8f); break;
+                }
+
+                // 💫 Reacción especial del núcleo en sinergias
+                if (coreController != null)
+                {
+                    coreController.SetEnergyColor(
+                        new Color(synergyColor.r * 1.2f, synergyColor.g * 1.2f, synergyColor.b * 1.2f),
+                        Color.white
+                    );
+                    coreController.StartCharge();
+                    coreController.ActivatePulse(2.5f);
+                    StartCoroutine(ReleaseCoreAfterDelay());
+                }
+
                 // Visual feedback para sinergia
                 visualManager.TriggerCombo(comboCount + 1, Vector3.zero);
                 EnergyAudioManager.Instance.PlayCombo(comboCount + 1);
             }
+
+            FindObjectOfType<EnergySynergyVisuals>()?.ShowSynergy(key);
         }
+
+        IEnumerator ReleaseCoreAfterDelay()
+        {
+            yield return new WaitForSeconds(2f);
+            if (coreController != null)
+                coreController.ReleaseCharge();
+        }
+
 
         lastEnergy = energyType;
 
@@ -147,9 +191,12 @@ public class EnergyGameController : MonoBehaviour
         currentScore += Mathf.RoundToInt(finalPoints);
         turnsLeft--;
 
-        // Visual feedback del combo actual
+
         visualManager.TriggerCombo(comboCount, Vector3.zero);
         EnergyAudioManager.Instance.PlayCombo(comboCount);
+        // Después de calcular comboCount
+        FindObjectOfType<EnergyMomentumManager>()?.OnComboChanged(comboCount);
+
         SpawnFX(energyType);
 
         UpdateUI();
@@ -208,9 +255,38 @@ public class EnergyGameController : MonoBehaviour
 
     void UpdateUI()
     {
-        scoreText.text = "Score: " + currentScore;
+        // Animar el texto de score (contador progresivo)
+        int displayedScore = 0;
+
+        // Si ya había un texto anterior, lo leemos (opcional)
+        int.TryParse(scoreText.text.Replace("Score: ", ""), out displayedScore);
+
+        // Cancelar animaciones previas (por seguridad)
+        DOTween.Kill(scoreText);
+
+        // Animar del valor actual mostrado al nuevo valor real
+        DOTween.To(() => displayedScore, x =>
+        {
+            displayedScore = x;
+            scoreText.text = "Score: " + displayedScore.ToString("N0"); // "N0" = formato con miles
+        },
+        currentScore, // valor objetivo
+        0.5f // duración de la animación
+        ).SetEase(Ease.OutQuad);
+        // Pequeño rebote visual en el texto del score
+        scoreText.transform.DOKill();
+        scoreText.transform.localScale = Vector3.one;
+        scoreText.transform.DOScale(1.2f, 0.2f).SetEase(Ease.OutBack)
+            .OnComplete(() => scoreText.transform.DOScale(1f, 0.3f));
+
+        // Flash de color temporal (a tono con la última energía usada)
+        scoreText.DOColor(new Color(1f, 0.85f, 0.2f), 0.1f)
+            .OnComplete(() => scoreText.DOColor(Color.white, 0.3f));
+
+        // Actualizar los turnos sin animar (solo texto)
         turnsText.text = "Turns Left: " + turnsLeft;
     }
+
 
     void EndGame()
     {
@@ -248,7 +324,7 @@ public class EnergyGameController : MonoBehaviour
         // Reiniciar efectos previos
         combosBlocked = false;
         synergyBoostMultiplier = 1f;
-
+        FindObjectOfType<EnergyMomentumManager>()?.ResetMomentum();
         // Seleccionar modificador aleatorio
         if (possibleModifiers != null && possibleModifiers.Count > 0)
         {
@@ -330,16 +406,75 @@ public class EnergyGameController : MonoBehaviour
     void SpawnFX(string type)
     {
         GameObject fx = null;
-        if (type == "Red") fx = redFX;
-        if (type == "Blue") fx = blueFX;
-        if (type == "Green") fx = greenFX;
-        if (type == "Yellow") fx = yellowFX;
-        if (type == "Purple") fx = purpleFX;
+        Color energyColor = Color.white;
+        AudioClip sfx = null;
 
+        switch (type)
+        {
+            case "Red":
+                fx = redFX; energyColor = new Color(1f, 0.3f, 0.1f); sfx = EnergyAudioManager.Instance.clickSound; break;
+            case "Blue":
+                fx = blueFX; energyColor = new Color(0.2f, 0.6f, 1f); sfx = EnergyAudioManager.Instance.comboSound; break;
+            case "Green":
+                fx = greenFX; energyColor = new Color(0.1f, 1f, 0.4f); sfx = EnergyAudioManager.Instance.clickSound; break;
+            case "Yellow":
+                fx = yellowFX; energyColor = new Color(1f, 0.9f, 0.2f); sfx = EnergyAudioManager.Instance.megaComboSound; break;
+            case "Purple":
+                fx = purpleFX; energyColor = new Color(0.6f, 0.2f, 0.8f); sfx = EnergyAudioManager.Instance.comboSound; break;
+        }
 
         if (fx != null)
             Instantiate(fx, Vector3.zero, Quaternion.identity);
+
+        // 🔮 Reacción del núcleo según energía
+        if (coreController != null)
+        {
+            coreController.SetEnergyColor(energyColor, energyColor * 1.8f);
+            coreController.ActivatePulse(1.3f);
+        }
+
+        // 🌈 Fondo dinámico
+        StartCoroutine(AnimateBackgroundColor(energyColor, 0.8f));
+
+        // 💥 Score flash
+        StartCoroutine(FlashScoreColor(energyColor));
+
+        // 🔊 Sonido
+        if (sfx != null)
+            EnergyAudioManager.Instance.sfxSource.PlayOneShot(sfx);
+
+        // 💫 Cámara shake leve
+        StartCoroutine(ShakeCamera(0.15f, 0.08f));
+
+        // 🎇 Actualizar backgroundFX
+        visualManager.backgroundFX.SetBaseColor(energyColor);
     }
+
+    IEnumerator FlashScoreColor(Color c)
+    {
+        var original = scoreText.color;
+        scoreText.color = c;
+        yield return new WaitForSeconds(0.2f);
+        scoreText.color = original;
+    }
+
+    IEnumerator ShakeCamera(float duration, float intensity)
+    {
+        var cam = Camera.main;
+        if (cam == null) yield break;
+        Vector3 startPos = cam.transform.position;
+
+        float t = 0;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            cam.transform.position = startPos + Random.insideUnitSphere * intensity;
+            yield return null;
+        }
+
+        cam.transform.position = startPos;
+    }
+
     void GiveRandomReward()
     {
         var meta = MetaProgressionManager.Instance;

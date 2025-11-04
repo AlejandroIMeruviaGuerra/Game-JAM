@@ -23,6 +23,11 @@ public class EnergyVisualManager : MonoBehaviour
     public float comboTextScale = 1.5f;
     public float comboTextDuration = 0.3f;
 
+    public BackgroundFX backgroundFX;
+
+    public EnergyBackgroundPulse bgPulse;
+
+    public TextMeshProUGUI scoreText;
 
     void Start()
     {
@@ -46,6 +51,14 @@ public class EnergyVisualManager : MonoBehaviour
         if (comboParticlesPrefab)
             Instantiate(comboParticlesPrefab, position, Quaternion.identity);
 
+        if (bgPulse != null)
+        {
+            bgPulse.SetPulseLevel(comboCount * 0.2f);
+        }
+
+        AnimateScorePulse();
+
+        AnimateComboText("COMBO ×" + comboCount, comboText.color);
         // Sacudir cámara
         StartCoroutine(ShakeCamera());
 
@@ -57,6 +70,21 @@ public class EnergyVisualManager : MonoBehaviour
         comboText.transform.DOScale(comboTextScale, comboTextDuration)
             .SetEase(Ease.OutBack);
 
+    }
+
+    public void AnimateComboText(string text, Color color)
+    {
+        comboText.text = text;
+        comboText.color = color;
+        comboText.alpha = 0;
+        comboText.gameObject.SetActive(true);
+
+        comboText.transform.localScale = Vector3.one * 0.5f;
+        comboText.DOFade(1f, 0.2f);
+        comboText.transform.DOScale(1.3f, 0.3f).SetEase(Ease.OutBack);
+        comboText.transform.DOScale(1f, 0.4f).SetEase(Ease.InOutQuad).SetDelay(0.3f);
+
+        comboText.DOFade(0, 0.5f).SetDelay(1.2f);
     }
 
     IEnumerator FadeOutText()
@@ -77,4 +105,16 @@ public class EnergyVisualManager : MonoBehaviour
         }
         mainCamera.transform.position = originalCamPos;
     }
+
+    public void AnimateScorePulse()
+    {
+        if (scoreText == null) return;
+        scoreText.transform.DOKill();
+        scoreText.transform.localScale = Vector3.one;
+        scoreText.transform.DOScale(1.3f, 0.2f)
+            .SetEase(Ease.OutBack)
+            .OnComplete(() => scoreText.transform.DOScale(1f, 0.3f));
+    }
+
 }
+
