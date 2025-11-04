@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9167468830629431294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2489912459760785737}
+  - component: {fileID: 1257509672768600645}
+  m_Layer: 0
+  m_Name: 'PuzzleRoot '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2489912459760785737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167468830629431294}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.3622403, y: -9.2508135, z: 5.09346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1257509672768600645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9167468830629431294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e678586ca2526bd41bf9c9f93fa37f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pads:
+  - name: Rojo
+    renderer: {fileID: 0}
+    onColor: {r: 1, g: 0.32156864, b: 0.3019608, a: 0}
+    baseColor: {r: 1, g: 0.31764707, b: 0.2901961, a: 0}
+    onIntensity: 226.3
+    offIntensity: 0
+  - name: Azul
+    renderer: {fileID: 0}
+    onColor: {r: 0.2509804, g: 1, b: 1, a: 0}
+    baseColor: {r: 0.50980395, g: 1, b: 0.9921569, a: 0}
+    onIntensity: 94.4
+    offIntensity: 0
+  - name: Amarillo
+    renderer: {fileID: 0}
+    onColor: {r: 1, g: 1, b: 0.20000002, a: 0}
+    baseColor: {r: 1, g: 1, b: 0.23137257, a: 0}
+    onIntensity: 100
+    offIntensity: 0
+  totalRounds: 3
+  showDelay: 0.5
+  pulseTime: 0.25
+  roundAccel: 0.9
+  startLength: 3
+  fadeDuration: 0.2
+  sonidoPad: {fileID: 0}
+  sonidoAcierto: {fileID: 0}
+  sonidoFallo: {fileID: 8300000, guid: f2ce1a57f0eebdf4c8058e8a33e007d7, type: 3}
+  gameStarted: 0
+  showingSequence: 0
+  waitingInput: 0
+  puzzleCompleted: 0
+  failed: 0
+  inputIndex: 0
+  currentRound: 0

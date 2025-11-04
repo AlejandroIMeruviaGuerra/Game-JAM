@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\assets\\02_scripts\\playerhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\playerhealthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|c:\\6to_semestre\\realidad virtual\\gameham2\\integraciones\\game-jam-puzzle-search-y-pulidos\\assets\\02_scripts\\playerhealthsliderui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\playerhealthsliderui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|c:\\6to_semestre\\realidad virtual\\gameham2\\integraciones\\game-jam-puzzle-search-y-pulidos\\assets\\02_scripts\\avatarblink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\avatarblink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|c:\\6to_semestre\\realidad virtual\\gameham2\\integraciones\\game-jam-puzzle-search-y-pulidos\\assets\\02_scripts\\cookingstation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\cookingstation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|c:\\6to_semestre\\realidad virtual\\gameham2\\integraciones\\game-jam-puzzle-search-y-pulidos\\assets\\02_scripts\\playercookingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\playercookingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\assets\\02_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\assets\\02_scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BEF1C2D-73B8-A665-04A9-DCEDF681CD38}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerCookingSystem.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\PlayerCookingSystem.cs",
+              "ViewState": "AQIAAPYBAAAAAAAAAAAQwP4BAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T04:43:55.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CookingStation.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\CookingStation.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\CookingStation.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\CookingStation.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\CookingStation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T04:39:47.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AvatarBlink.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\AvatarBlink.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\AvatarBlink.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\AvatarBlink.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\AvatarBlink.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAQwDoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T04:14:49.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerHealthSliderUI.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerHealthSliderUI.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\PlayerHealthSliderUI.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerHealthSliderUI.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\PlayerHealthSliderUI.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAQwJwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T21:31:54.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerHealthBar.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerHealthBar.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\PlayerHealthBar.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerHealthBar.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\PlayerHealthBar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T19:19:13.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Player.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Player.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwLcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T19:11:42.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\PlayerHealth.cs",
+              "ToolTip": "C:\\6TO_SEMESTRE\\REALIDAD VIRTUAL\\GAMEHAM2\\INTEGRACIONES\\Game-JAM-puzzle-search-y-pulidos\\Assets\\02_Scripts\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\PlayerHealth.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAQwEYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T19:10:42.124Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

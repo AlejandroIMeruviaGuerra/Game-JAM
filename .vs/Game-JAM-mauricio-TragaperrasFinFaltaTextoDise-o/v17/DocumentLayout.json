@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|d:\\descargas\\game-jam-mauricio-tragaperrasfinfaltatextodise-o\\assets\\02_scripts\\puzzle_search\\findobjectgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\puzzle_search\\findobjectgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\assets\\02_scripts\\puzzle_search\\bannerencontraranim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\puzzle_search\\bannerencontraranim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\assets\\02_scripts\\puzzle_tragaperras\\slotmachinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\puzzle_tragaperras\\slotmachinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\assets\\02_scripts\\txtmeshfuentes\\fallingtextui2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\txtmeshfuentes\\fallingtextui2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\assets\\02_scripts\\txtmeshfuentes\\uibuttonpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\txtmeshfuentes\\uibuttonpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\assets\\02_scripts\\txtmeshfuentes\\fallingtextui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E01422AA-2E55-7A4F-5B4F-8B0DA4BE6CB9}|Assembly-CSharp.csproj|solutionrelative:assets\\02_scripts\\txtmeshfuentes\\fallingtextui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BannerEncontrarAnim.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\Puzzle_Search\\BannerEncontrarAnim.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Puzzle_Search\\BannerEncontrarAnim.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\Puzzle_Search\\BannerEncontrarAnim.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Puzzle_Search\\BannerEncontrarAnim.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T13:53:46.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FindObjectGame.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\Puzzle_Search\\FindObjectGame.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Puzzle_Search\\FindObjectGame.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\Puzzle_Search\\FindObjectGame.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Puzzle_Search\\FindObjectGame.cs",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAIwDYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T02:58:31.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SlotMachineController.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\Puzzle_Tragaperras\\SlotMachineController.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAuwKcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T01:03:38.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FallingTextUI2.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI2.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI2.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI2.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI2.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAQwIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T03:20:45.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UIButtonPulse.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\TxtMeshFuentes\\UIButtonPulse.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\TxtMeshFuentes\\UIButtonPulse.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\TxtMeshFuentes\\UIButtonPulse.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\TxtMeshFuentes\\UIButtonPulse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T03:18:27.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FallingTextUI.cs",
+              "DocumentMoniker": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI.cs",
+              "RelativeDocumentMoniker": "Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI.cs",
+              "ToolTip": "D:\\Descargas\\Game-JAM-mauricio-TragaperrasFinFaltaTextoDise-o\\Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI.cs",
+              "RelativeToolTip": "Assets\\02_Scripts\\TxtMeshFuentes\\FallingTextUI.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAIwFEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T01:21:30.194Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
