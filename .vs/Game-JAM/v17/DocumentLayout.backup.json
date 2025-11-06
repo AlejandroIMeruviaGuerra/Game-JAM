@@ -1,93 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\",
+  "WorkspaceRootPath": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|c:\\users\\pc\\onedrive\\documentos\\univalle\\semestre 6\\game jam 2\\game-jam\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\aura.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\aura.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|d:\\realidad aumentada\\game jam 2\\game-jam\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\shaderspower\\mustardflow.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\shaderspower\\mustardflow.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|c:\\users\\pc\\onedrive\\documentos\\univalle\\semestre 6\\game jam 2\\game-jam\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energygamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energygamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|d:\\realidad aumentada\\game jam 2\\game-jam\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\shaderspower\\mayonnaiseflow.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\shaderspower\\mayonnaiseflow.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyeffectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\shaderspower\\ketchupdrip.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\shaderspower\\ketchupdrip.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\scripts\\ketchupoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\shaderspowerups\\scripts\\ketchupoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyeffectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyeffectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energycorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energygamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energygamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energycorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energycorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\energycore.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\energycore.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\energycore.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\animatedscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\animatedscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\animatedscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energybackgroundpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energybackgroundpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energybackgroundpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\energypulse.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\energypulse.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\shaders\\shaderscode\\energypulse.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyvisualmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyvisualmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyvisualmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\backgroundfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\backgroundfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\backgroundfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\itemuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\itemuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\itemuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\metaprogressionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\metaprogressionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\metaprogressionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\equipmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\equipmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\equipmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energysynergyvisuals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energysynergyvisuals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energysynergyvisuals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energybuttonfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energybuttonfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energybuttonfx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyfxlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyfxlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyfxlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energymomentummanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energymomentummanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energymomentummanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyitempanelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyitempanelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\energyitempanelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\rewardpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\rewardpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\rewardpanelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\roundmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\roundmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\roundmodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\audio\\energyaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\audio\\energyaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\audio\\energyaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\objects\\energyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\objects\\energyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D73BF324-B926-11BB-3771-F721A3D7A0BF}|Assembly-CSharp.csproj|solutionrelative:assets\\00_scenes\\scenas pruebas\\scenes pablo\\energias\\scripts\\objects\\energyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -126,32 +138,69 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Aura.shader",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\Aura.shader",
-              "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\Aura.shader",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\Aura.shader",
-              "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\Aura.shader",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwA0AAAAPAAAAAAAAAA==",
+              "Title": "MustardFlow.shader",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MustardFlow.shader",
+              "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MustardFlow.shader",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MustardFlow.shader",
+              "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MustardFlow.shader",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-11-04T00:51:34.88Z",
+              "WhenOpened": "2025-11-04T19:07:08.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MayonnaiseFlow.shader",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MayonnaiseFlow.shader",
+              "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MayonnaiseFlow.shader",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MayonnaiseFlow.shader",
+              "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\MayonnaiseFlow.shader",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-11-04T18:59:50.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KetchupOverlay.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\Scripts\\KetchupOverlay.cs",
+              "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\Scripts\\KetchupOverlay.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\Scripts\\KetchupOverlay.cs",
+              "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\Scripts\\KetchupOverlay.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T18:10:57.29Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "KetchupDrip.shader",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\KetchupDrip.shader",
+              "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\KetchupDrip.shader",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\KetchupDrip.shader",
+              "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\ShadersPowerUps\\ShadersPower\\KetchupDrip.shader",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowFoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-11-04T17:59:59.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "EnergyEffectManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyEffectManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyEffectManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyEffectManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyEffectManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyEffectManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyEffectManager.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAQwDYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -159,11 +208,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "EnergyCore.shader",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyCore.shader",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyCore.shader",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyCore.shader",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyCore.shader",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyCore.shader",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyCore.shader",
               "ViewState": "AgIAADgAAAAAAAAAAAAmwE8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
@@ -171,11 +220,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EnergyCoreController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyCoreController.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyCoreController.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyCoreController.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyCoreController.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyCoreController.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyCoreController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -183,11 +232,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "AnimatedScore.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\AnimatedScore.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\AnimatedScore.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\AnimatedScore.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\AnimatedScore.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\AnimatedScore.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\AnimatedScore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -195,11 +244,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "EnergyBackgroundPulse.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyBackgroundPulse.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyBackgroundPulse.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyBackgroundPulse.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyBackgroundPulse.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyBackgroundPulse.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyBackgroundPulse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -207,11 +256,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "EnergyPulse.shader",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyPulse.shader",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyPulse.shader",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyPulse.shader",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyPulse.shader",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyPulse.shader",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Shaders\\ShadersCode\\EnergyPulse.shader",
               "ViewState": "AgIAABcAAAAAAAAAAAAcwDcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
@@ -219,11 +268,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "BackgroundFX.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\BackgroundFX.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\BackgroundFX.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\BackgroundFX.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\BackgroundFX.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\BackgroundFX.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\BackgroundFX.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -231,11 +280,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "EnergyMomentumManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyMomentumManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyMomentumManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyMomentumManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyMomentumManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyMomentumManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyMomentumManager.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -243,11 +292,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "EnergySynergyVisuals.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergySynergyVisuals.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergySynergyVisuals.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergySynergyVisuals.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergySynergyVisuals.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergySynergyVisuals.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergySynergyVisuals.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAqwFAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -255,11 +304,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "EnergyButtonFX.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyButtonFX.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyButtonFX.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyButtonFX.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyButtonFX.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyButtonFX.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyButtonFX.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAswBYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -267,11 +316,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "EnergyFXLibrary.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyFXLibrary.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyFXLibrary.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyFXLibrary.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyFXLibrary.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyFXLibrary.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyFXLibrary.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwBEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -279,11 +328,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "RoundModifier.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RoundModifier.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RoundModifier.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RoundModifier.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RoundModifier.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RoundModifier.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RoundModifier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -291,11 +340,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "RewardPanelManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RewardPanelManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RewardPanelManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RewardPanelManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RewardPanelManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RewardPanelManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\RewardPanelManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -303,11 +352,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "EnergyAudioManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Audio\\EnergyAudioManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Audio\\EnergyAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Audio\\EnergyAudioManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Audio\\EnergyAudioManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Audio\\EnergyAudioManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Audio\\EnergyAudioManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -315,24 +364,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EnergyGameController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyGameController.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyGameController.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyGameController.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyGameController.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyGameController.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyGameController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T05:51:40.101Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T05:51:40.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "MetaProgressionManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\MetaProgressionManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\MetaProgressionManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\MetaProgressionManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\MetaProgressionManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\MetaProgressionManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\MetaProgressionManager.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwFsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -340,11 +388,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "EnergyVisualManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyVisualManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyVisualManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyVisualManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyVisualManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyVisualManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyVisualManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -352,11 +400,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "EquipMenuManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EquipMenuManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EquipMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EquipMenuManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EquipMenuManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EquipMenuManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EquipMenuManager.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAwwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -364,11 +412,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ItemUIManager.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\ItemUIManager.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\ItemUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\ItemUIManager.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\ItemUIManager.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\ItemUIManager.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\ItemUIManager.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAwwBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -376,11 +424,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "EnergyItem.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Objects\\EnergyItem.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Objects\\EnergyItem.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Objects\\EnergyItem.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Objects\\EnergyItem.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Objects\\EnergyItem.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\Objects\\EnergyItem.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAwwBIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -388,11 +436,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "EnergyItemPanelUI.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyItemPanelUI.cs",
+              "DocumentMoniker": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyItemPanelUI.cs",
               "RelativeDocumentMoniker": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyItemPanelUI.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Univalle\\Semestre 6\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyItemPanelUI.cs",
+              "ToolTip": "D:\\Realidad Aumentada\\Game Jam 2\\Game-JAM\\Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyItemPanelUI.cs",
               "RelativeToolTip": "Assets\\00_Scenes\\Scenas pruebas\\Scenes Pablo\\Energias\\Scripts\\EnergyItemPanelUI.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
