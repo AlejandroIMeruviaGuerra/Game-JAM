@@ -1,4 +1,4 @@
-Shader "Custom/ChaosEnergy_Interactive"
+ï»¿Shader "Custom/ChaosEnergy_Interactive"
 {
     Properties
     {
@@ -79,16 +79,16 @@ Shader "Custom/ChaosEnergy_Interactive"
                 float2 uv = IN.uv - 0.5;
                 float t = _Time.y * _Speed;
 
-                // Movimiento caótico giratorio
+                // Movimiento caÃ³tico giratorio
                 float angle = atan2(uv.y, uv.x) + sin(t * 0.5) * _Twist;
                 float radius = length(uv) * 2.0;
 
-                // Distorsión caótica
+                // DistorsiÃ³n caÃ³tica
                 float2 flow = float2(cos(angle * 2.0 + t), sin(angle * 3.0 - t)) * _Distortion;
                 float n = noise(uv * 6.0 + flow) + noise(uv * 12.0 - flow * 0.7) * 0.6;
                 n = pow(saturate(n), 1.6);
 
-                // Núcleo brillante
+                // NÃºcleo brillante
                 float core = smoothstep(0.2, 0.0, radius);
                 float3 color = lerp(_AuraColor.rgb, _CoreColor.rgb, n + core * 1.2);
 

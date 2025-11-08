@@ -153,6 +153,8 @@ public class EnergyGameController : MonoBehaviour
             }
 
             FindObjectOfType<EnergySynergyVisuals>()?.ShowSynergy(key);
+            FindObjectOfType<EnergyInfoPanel>()?.PopulatePanel(synergies, targetScore, maxTurns);
+
         }
 
         IEnumerator ReleaseCoreAfterDelay()
