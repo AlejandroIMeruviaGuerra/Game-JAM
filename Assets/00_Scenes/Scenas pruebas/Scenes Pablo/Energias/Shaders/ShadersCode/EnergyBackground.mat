@@ -100,7 +100,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Intensity: 1
+    - _Intensity: 1.5
     - _Metallic: 0
     - _NoiseScale: 4
     - _OcclusionStrength: 1
@@ -110,7 +110,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 1.5
+    - _Speed: 2.5
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0

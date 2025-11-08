@@ -87,11 +87,11 @@ public class EnergyGameController : MonoBehaviour
     {
         synergies = new Dictionary<string, EnergySynergy>()
     {
-        { "Red-Green", new EnergySynergy("🔥 Fusión Vital", 2.0f, "Fuego y Naturaleza crean un impulso de vida.") },
-        { "Green-Blue", new EnergySynergy("💧 Brote Marino", 1.8f, "Agua nutre la vida y potencia el siguiente turno.") },
-        { "Blue-Red", new EnergySynergy("⚡ Tormenta Ígnea", 2.5f, "Electricidad calienta el aire y genera una tormenta.") },
-        { "Yellow-Red", new EnergySynergy("☀️ Estallido Solar", 3.0f, "La luz enciende el fuego: daño masivo.") },
-        { "Purple-Yellow", new EnergySynergy("🌑 Eclipse Total", 4.0f, "Luz y oscuridad chocan generando caos total.") },
+        { "Red-Green", new EnergySynergy("Fusión Vital", 2.0f, "Fuego y Naturaleza crean un impulso de vida.") },
+        { "Green-Blue", new EnergySynergy("Brote Marino", 1.8f, "Agua nutre la vida y potencia el siguiente turno.") },
+        { "Blue-Red", new EnergySynergy("Tormenta Ígnea", 2.5f, "Electricidad calienta el aire y genera una tormenta.") },
+        { "Yellow-Red", new EnergySynergy("Estallido Solar", 3.0f, "La luz enciende el fuego: daño masivo.") },
+        { "Purple-Yellow", new EnergySynergy("Eclipse Total", 4.0f, "Luz y oscuridad chocan generando caos total.") },
     };
     }
 
@@ -287,6 +287,12 @@ public class EnergyGameController : MonoBehaviour
 
         // Actualizar los turnos sin animar (solo texto)
         turnsText.text = "Turns Left: " + turnsLeft;
+        var infoPanel = FindObjectOfType<EnergyInfoPanel>();
+        if (infoPanel != null)
+        {
+            infoPanel.UpdateTurns(turnsLeft);
+        }
+
     }
 
 
@@ -340,6 +346,14 @@ public class EnergyGameController : MonoBehaviour
         }
 
         Debug.Log($"🌀 Ronda {currentRound} — Nuevo objetivo: {targetScore}");
+
+        var infoPanel = FindObjectOfType<EnergyInfoPanel>();
+        if (infoPanel != null)
+        {
+            infoPanel.UpdateObjective(targetScore);
+            infoPanel.UpdateTurns(turnsLeft);
+        }
+
         UpdateUI();
     }
     System.Collections.IEnumerator AnimateBackgroundColor(Color targetColor, float duration)

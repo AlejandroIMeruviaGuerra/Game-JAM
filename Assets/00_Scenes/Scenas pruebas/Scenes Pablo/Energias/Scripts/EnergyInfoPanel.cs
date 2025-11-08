@@ -59,4 +59,16 @@ public class EnergyInfoPanel : MonoBehaviour
         turnsText.text = $"🔁 Turnos: {turns}";
         tipText.text = "💡 Combina energías para crear sinergias poderosas.";
     }
+    public void UpdateObjective(int newObjective)
+    {
+        if (objectiveText != null)
+            objectiveText.text = $"🎯 Objetivo: {newObjective:N0}";
+    }
+
+    public void UpdateTurns(int newTurns)
+    {
+        if (turnsText != null)
+            turnsText.text = $"🔁 Turnos: {newTurns}";
+    }
+
 }
